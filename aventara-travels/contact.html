@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Aventara Travels</title>
+    <meta name="description" content="Contact Aventara Travels to plan your journey. We are here to help create a Sri Lankan journey that feels uniquely yours.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo/LOGO_REAL_TRANSPARENT.png" alt="Aventara Travels Logo" style="height: 60px; width: auto; object-fit: contain;">
+                </a>
+            </div>
+            
+              <nav class="nav-menu">
+                  <a href="about.html" class="nav-link">About Us</a>
+                  
+                  <a href="tours.html" class="nav-link">Tours</a>
+                  
+                  <a href="destinations.html" class="nav-link">Destinations</a>
+                  
+                  <div class="nav-item">
+                      <a href="#" class="nav-link">Our Expertise</a>
+                      <div class="dropdown-menu">
+                          <a href="transportation.html" class="dropdown-link">Transportation</a>
+                          <a href="wellness.html" class="dropdown-link">Wellness</a>
+                          <a href="nature-and-adventure.html" class="dropdown-link">Nature & Adventure</a>
+                      </div>
+                  </div>
+                  
+                  <div class="nav-item">
+                      <a href="experiences.html" class="nav-link">Experience Sri Lanka</a>
+                      <div class="dropdown-menu">
+                          <a href="experience-nature.html" class="dropdown-link">Explore Nature</a>
+                          <a href="experience-heritage.html" class="dropdown-link">Heritage & Culture</a>
+                          <a href="experience-beaches.html" class="dropdown-link">Beaches & Sunsets</a>
+                          <a href="experience-wildlife.html" class="dropdown-link">Wildlife & Adventure</a>
+                          <a href="experience-religious.html" class="dropdown-link">Religious Journeys</a>
+                      </div>
+                  </div>
+                  
+                  <div class="nav-item">
+                      <a href="#" class="nav-link">Travel Guide</a>
+                      <div class="dropdown-menu">
+                          <a href="things-to-do.html" class="dropdown-link">Things to Do</a>
+                          <a href="foods-drinks.html" class="dropdown-link">Foods & Drinks</a>
+                      </div>
+                  </div>
+                  
+                  <a href="contact.html" class="nav-link">Contact</a>
+                  <a href="index.html#journey-planner" class="btn-glass" style="margin-left: 1rem;">Plan Your Journey</a>
+              </nav>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="banner" style="background-image: url('https://en.wikipedia.org/wiki/Special:FilePath/Sigiriya_rock_from_a_distance.jpg?width=800'); padding: 12rem 0 8rem;">
+        <div class="container banner-content reveal">
+            <h1>Let's Create Your Journey</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Whether you already know where you want to go or need inspiration, our team is here to help create a Sri Lankan journey that feels uniquely yours.</p>
+        </div>
+    </section>
+
+    <!-- Contact Info & Form -->
+    <section class="container">
+        <div class="intro-grid">
+            
+            <!-- Contact Details -->
+            <div class="reveal">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 style="margin-bottom: 2rem;">Contact Information</h2>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-family: var(--font-body); font-size: 1rem; color: var(--ocean-blue); margin-bottom: 0.5rem; text-transform: uppercase;">Phone</h3>
+                    <p style="font-size: 1.2rem;"><a href="tel:+94779970840">+94 77 99 70 840</a></p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-family: var(--font-body); font-size: 1rem; color: var(--ocean-blue); margin-bottom: 0.5rem; text-transform: uppercase;">WhatsApp</h3>
+                    <p style="font-size: 1.2rem;"><a href="https://wa.me/94779970840">+94 77 99 70 840</a></p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-family: var(--font-body); font-size: 1rem; color: var(--ocean-blue); margin-bottom: 0.5rem; text-transform: uppercase;">Email</h3>
+                    <p style="font-size: 1.2rem;"><a href="mailto:aventaratravels@gmail.com">aventaratravels@gmail.com</a></p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-family: var(--font-body); font-size: 1rem; color: var(--ocean-blue); margin-bottom: 0.5rem; text-transform: uppercase;">Location</h3>
+                    <p style="font-size: 1.2rem;">Nuwaraeliya Road, Keppetipola</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="card reveal" style="padding: 3rem;">
+                <h3 style="margin-bottom: 1.5rem;">Send us a message</h3>
+                <form class="enquiry-form">
+                    <div class="form-group">
+                        <label for="c-name">Name *</label>
+                        <input type="text" id="c-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-email">Email *</label>
+                        <input type="email" id="c-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-phone">Phone</label>
+                        <input type="text" id="c-phone">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="c-country">Country</label>
+                            <input type="text" id="c-country">
+                        </div>
+                        <div class="form-group">
+                            <label for="c-travellers">Number of travellers</label>
+                            <input type="number" id="c-travellers" min="1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-dates">Travel dates</label>
+                        <input type="text" id="c-dates" placeholder="e.g. December 2026">
+                    </div>
+                    <div class="form-group">
+                        <label for="c-message">Message *</label>
+                        <textarea id="c-message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">SEND ENQUIRY</button>
+                    <div class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-sand">
+        <div class="container reveal">
+            <div class="text-center">
+                <span class="section-subtitle">Information</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="accordion" style="max-width: 800px; margin: 3rem auto 0;">
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Can you create tailor-made itineraries?
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Yes. Every journey can be customised according to your interests, travel dates, preferred experiences and budget.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Do you arrange private tours?
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Yes. Private journeys with dedicated transportation and professional local assistance can be arranged.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Can you arrange honeymoon holidays?
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Yes. We create romantic and personalised honeymoon journeys across Sri Lanka.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Do you arrange wildlife safaris?
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Yes. Wildlife experiences and safari programs can be incorporated into your itinerary.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Can you arrange family holidays?
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Yes. We can create comfortable and family-friendly itineraries suitable for different age groups.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Can Aventara arrange accommodation and transportation?
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Yes. We coordinate carefully selected accommodation, transportation and destination services as part of your journey.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Do you work with international travel companies?
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Yes. Aventara also works with international tour operators, travel agencies and B2B partners for dependable destination and ground-handling services in Sri Lanka.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-heading" style="font-family: var(--font-heading); color: var(--off-white); font-size: 1.5rem;">AVENTARA TRAVELS</h3>
+                    <p style="color: var(--warm-gold); font-size: 0.9rem; letter-spacing: 1px;">Curated Journeys, Unforgettable Memories.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Plan Your Journey</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#journey-planner">Request a Quote</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="experiences.html">Travel Inspiration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+94779970840">+94 77 99 70 840</a></li>
+                        <li><a href="https://wa.me/94779970840">WhatsApp: +94 77 99 70 840</a></li>
+                        <li><a href="mailto:aventaratravels@gmail.com">aventaratravels@gmail.com</a></li>
+                        <li>Nuwaraeliya Road, Keppetipola</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/197h6vNKG1/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="https://www.instagram.com/aventaratravels?igsh=MTZwbDJjaGkwYjViNQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aventara Travels. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <button class="floating-share" id="shareBtn" aria-label="Share Website">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    </button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
