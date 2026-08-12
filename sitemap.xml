@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://aventaratravels.com/</loc>
@@ -79,6 +79,82 @@
 
   <url>
     <loc>https://aventaratravels.com/destination-trincomalee.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/destinations.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/tours.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/experiences.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/our-expertise.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/transportation.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/wellness.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/nature-and-adventure.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/experience-nature.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/experience-heritage.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/experience-beaches.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/experience-wildlife.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/experience-religious.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/travel-guide.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/things-to-do.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/foods-drinks.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/germany.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/netherlands.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/privacy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://aventaratravels.com/terms.html</loc>
   </url>
 
 </urlset>
