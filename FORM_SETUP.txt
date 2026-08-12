@@ -1,0 +1,16 @@
+AVENTARA TRAVELS — QUOTATION FORM SETUP
+
+The website quotation and contact forms now submit through FormSubmit to:
+aventaratravels@gmail.com
+
+IMPORTANT:
+1. Upload these updated files to your GitHub Pages repository.
+2. Submit a test quotation from the live website.
+3. FormSubmit may send an activation/confirmation email to aventaratravels@gmail.com the first time.
+4. Open that email and activate/confirm the form.
+5. Submit another test quotation and confirm it arrives in the inbox.
+
+No Gmail password is stored in the website.
+
+The form endpoint is:
+https://formsubmit.co/ajax/aventaratravels@gmail.com

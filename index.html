@@ -428,37 +428,37 @@
             <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-family: var(--font-body); letter-spacing: 2px;">YOUR SRI LANKAN STORY STARTS HERE</h3>
             <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Tell us what inspires you, and we'll craft a journey around it.</p>
             
-            <form class="enquiry-form" style="max-width: 800px; margin: 0 auto; background: #fff; padding: 3rem; color: #151515; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <form class="enquiry-form" action="https://formsubmit.co/ajax/aventaratravels@gmail.com" method="POST" style="max-width: 800px; margin: 0 auto; background: #fff; padding: 3rem; color: #151515; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="full_name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="phone">Phone / WhatsApp</label>
-                        <input type="text" id="phone">
+                        <input type="text" id="phone" name="phone" autocomplete="tel">
                     </div>
                     <div class="form-group">
                         <label for="country">Country</label>
-                        <input type="text" id="country">
+                        <input type="text" id="country" name="country">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="arrival">Arrival Date</label>
-                        <input type="date" id="arrival">
+                        <input type="date" id="arrival" name="arrival_date">
                     </div>
                     <div class="form-group">
                         <label for="departure">Departure Date</label>
-                        <input type="date" id="departure">
+                        <input type="date" id="departure" name="departure_date">
                     </div>
                 </div>
                 
@@ -466,13 +466,13 @@
                     <div class="form-group">
                         <label for="travellers">Number of Travellers</label>
                         <div style="display: flex; gap: 1rem;">
-                            <input type="number" id="adults" min="1" placeholder="Adults" style="width: 50%;">
-                            <input type="number" id="children" min="0" placeholder="Children" style="width: 50%;">
+                            <input type="number" id="adults" name="adults" min="1" placeholder="Adults" style="width: 50%;">
+                            <input type="number" id="children" name="children" min="0" placeholder="Children" style="width: 50%;">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="travel-style">Preferred Travel Style</label>
-                        <select id="travel-style">
+                        <select id="travel-style" name="travel_style">
                             <option value="">Select...</option>
                             <option value="Tailor-Made">Tailor-Made</option>
                             <option value="Honeymoon">Honeymoon</option>
@@ -490,14 +490,17 @@
 
                 <div class="form-group">
                     <label for="accommodation">Accommodation Preference</label>
-                    <input type="text" id="accommodation" placeholder="e.g. 4-Star, 5-Star, Boutique, Eco-Lodges">
+                    <input type="text" id="accommodation" name="accommodation" placeholder="e.g. 4-Star, 5-Star, Boutique, Eco-Lodges">
                 </div>
                 
                 <div class="form-group">
                     <label for="message">Message *</label>
-                    <textarea id="message" rows="4" placeholder="Tell us about your ideal journey, estimated budget, and places you would like to visit." required></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your ideal journey, estimated budget, and places you would like to visit." required></textarea>
                 </div>
                 
+                <input type="hidden" name="_subject" value="New Aventara Travels Website Quote Request">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="true">
                 <button type="submit" class="btn btn-primary" style="width: 100%;">SEND ENQUIRY</button>
                 <div class="form-message"></div>
             </form>

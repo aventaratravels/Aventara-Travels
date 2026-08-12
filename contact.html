@@ -107,38 +107,41 @@
             <!-- Contact Form -->
             <div class="card reveal" style="padding: 3rem;">
                 <h3 style="margin-bottom: 1.5rem;">Send us a message</h3>
-                <form class="enquiry-form">
+                <form class="enquiry-form" action="https://formsubmit.co/ajax/aventaratravels@gmail.com" method="POST">
                     <div class="form-group">
                         <label for="c-name">Name *</label>
-                        <input type="text" id="c-name" required>
+                        <input type="text" id="c-name" name="full_name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="c-email">Email *</label>
-                        <input type="email" id="c-email" required>
+                        <input type="email" id="c-email" name="email" autocomplete="email" required>
                     </div>
                     <div class="form-group">
                         <label for="c-phone">Phone</label>
-                        <input type="text" id="c-phone">
+                        <input type="text" id="c-phone" name="phone" autocomplete="tel">
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="c-country">Country</label>
-                            <input type="text" id="c-country">
+                            <input type="text" id="c-country" name="country">
                         </div>
                         <div class="form-group">
                             <label for="c-travellers">Number of travellers</label>
-                            <input type="number" id="c-travellers" min="1">
+                            <input type="number" id="c-travellers" name="travellers" min="1">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="c-dates">Travel dates</label>
-                        <input type="text" id="c-dates" placeholder="e.g. December 2026">
+                        <input type="text" id="c-dates" name="travel_dates" placeholder="e.g. December 2026">
                     </div>
                     <div class="form-group">
                         <label for="c-message">Message *</label>
-                        <textarea id="c-message" rows="4" required></textarea>
+                        <textarea id="c-message" name="message" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">SEND ENQUIRY</button>
+                    <input type="hidden" name="_subject" value="New Aventara Travels Website Quote Request">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="true">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SEND ENQUIRY</button>
                     <div class="form-message"></div>
                 </form>
             </div>

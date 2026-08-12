@@ -128,16 +128,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Form Validation ---
-    const forms = document.querySelectorAll('form');
-    
+    // --- Quote / Contact Form Submission ---
+    const forms = document.querySelectorAll('form.enquiry-form');
+
     forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             let isValid = true;
             const requiredFields = form.querySelectorAll('[required]');
-            
+
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     isValid = false;
@@ -146,37 +146,47 @@ document.addEventListener('DOMContentLoaded', () => {
                     field.style.borderColor = '#ccc';
                 }
             });
-            
+
             const messageEl = form.querySelector('.form-message');
-            
-            if (isValid) {
-                // Simulate form submission
-                const btn = form.querySelector('button[type="submit"]');
-                const originalText = btn.innerHTML;
-                btn.innerHTML = 'Sending...';
-                btn.disabled = true;
-                
-                setTimeout(() => {
-                    form.reset();
-                    btn.innerHTML = originalText;
-                    btn.disabled = false;
-                    
-                    if (messageEl) {
-                        messageEl.textContent = 'Thank you! Your enquiry has been received. We will contact you shortly.';
-                        messageEl.className = 'form-message success';
-                        messageEl.style.display = 'block';
-                        
-                        setTimeout(() => {
-                            messageEl.style.display = 'none';
-                        }, 5000);
-                    }
-                }, 1500);
-            } else {
+            const btn = form.querySelector('button[type="submit"]');
+
+            if (!isValid) {
                 if (messageEl) {
                     messageEl.textContent = 'Please fill out all required fields.';
                     messageEl.className = 'form-message error';
                     messageEl.style.display = 'block';
                 }
+                return;
+            }
+
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'SENDING...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (!response.ok) throw new Error('Submission failed');
+
+                form.reset();
+                if (messageEl) {
+                    messageEl.textContent = 'Thank you! Your enquiry has been sent to Aventara Travels. We will contact you shortly.';
+                    messageEl.className = 'form-message success';
+                    messageEl.style.display = 'block';
+                }
+            } catch (error) {
+                if (messageEl) {
+                    messageEl.textContent = 'We could not send your enquiry right now. Please contact Aventara Travels by WhatsApp or email.';
+                    messageEl.className = 'form-message error';
+                    messageEl.style.display = 'block';
+                }
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
             }
         });
     });
