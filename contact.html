@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Aventara Travels | Sri Lanka Travel &amp; DMC</title>
+    <title>Contact Aventara Travels | Sri Lanka Travel & DMC</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <!-- SEO -->
-    <meta name="description" content="Contact Aventara Travels for tailor-made Sri Lanka holidays, private tours, B2B DMC services, hotel bookings, transport and travel quotations.">
+    <meta name="description" content="Contact Aventara Travels for tailor-made Sri Lanka holidays, private tours, B2B DMC services, hotel bookings, transportation and travel quotations.">
 
     <meta name="keywords" content="Sri Lanka travel agency, Sri Lanka DMC, Sri Lanka tours, private Sri Lanka tours, tailor made Sri Lanka holidays, Sri Lanka honeymoon, Sri Lanka luxury travel, Aventara Travels">
 
@@ -22,24 +16,199 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Contact Aventara Travels | Sri Lanka Travel &amp; DMC">
-    <meta property="og:description" content="Contact Aventara Travels for tailor-made Sri Lanka holidays, private tours, B2B DMC services, hotel bookings, transport and travel quotations.">
+    <meta property="og:title" content="Contact Aventara Travels | Sri Lanka Travel & DMC">
+    <meta property="og:description" content="Contact Aventara Travels for tailor-made Sri Lanka holidays, private tours, B2B DMC services, hotel bookings, transportation and travel quotations.">
     <meta property="og:url" content="https://aventaratravels.github.io/Aventara-Travels/contact.html">
     <meta property="og:site_name" content="Aventara Travels">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Aventara Travels | Sri Lanka Travel &amp; DMC">
-    <meta name="twitter:description" content="Contact Aventara Travels for tailor-made Sri Lanka holidays, private tours, B2B DMC services, hotel bookings, transport and travel quotations.">
+    <meta name="twitter:title" content="Contact Aventara Travels | Sri Lanka Travel & DMC">
+    <meta name="twitter:description" content="Contact Aventara Travels for tailor-made Sri Lanka holidays, private tours, B2B DMC services, hotel bookings, transportation and travel quotations.">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google reCAPTCHA Enterprise -->
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+
+    <style>
+        /* =========================================
+           CONTACT FORM
+        ========================================= */
+
+        .contact-form-card {
+            background: var(--off-white);
+            border-radius: 4px;
+            padding: 3rem;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form-intro {
+            margin-bottom: 2rem;
+        }
+
+        .contact-form-intro h3 {
+            margin-bottom: 0.6rem;
+        }
+
+        .contact-form-intro p {
+            color: #666;
+            margin: 0;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.35rem;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--deep-charcoal, #151515);
+        }
+
+        .contact-form label span {
+            color: #b08a4a;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #d7d2c8;
+            background: #fff;
+            color: #151515;
+            padding: 0.9rem 1rem;
+            border-radius: 3px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            border-color: var(--ocean-blue, #2d7185);
+            box-shadow: 0 0 0 3px rgba(45, 113, 133, 0.10);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #999;
+        }
+
+        .contact-form select {
+            appearance: auto;
+            cursor: pointer;
+        }
+
+        .contact-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .contact-form .date-wrapper {
+            position: relative;
+        }
+
+        .contact-form input[type="date"] {
+            cursor: pointer;
+        }
+
+        .required-note {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 0.5rem;
+        }
+
+        .captcha-wrapper {
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .submit-wrapper {
+            margin-top: 1.5rem;
+        }
+
+        .submit-wrapper button {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-message {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .form-message.success {
+            color: #287044;
+        }
+
+        .form-message.error {
+            color: #a33b3b;
+        }
+
+        .contact-detail {
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail h3 {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--ocean-blue);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-detail p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .contact-detail a {
+            text-decoration: none;
+        }
+
+        .contact-detail a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form-card {
+                padding: 2rem 1.25rem;
+            }
+
+            .contact-form .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .captcha-wrapper {
+                transform-origin: left top;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ============================= -->
-    <!-- HEADER -->
-    <!-- ============================= -->
-
+    <!-- =========================================
+         HEADER
+    ========================================== -->
     <header>
         <div class="container nav-container">
 
@@ -61,76 +230,38 @@
 
                 <a href="destinations.html" class="nav-link">Destinations</a>
 
-                <!-- Our Expertise -->
                 <div class="nav-item">
-                    <a href="our-expertise.html" class="nav-link">
-                        Our Expertise
-                    </a>
+                    <a href="our-expertise.html" class="nav-link">Our Expertise</a>
 
                     <div class="dropdown-menu">
-                        <a href="transportation.html" class="dropdown-link">
-                            Transportation
-                        </a>
-
-                        <a href="wellness.html" class="dropdown-link">
-                            Wellness
-                        </a>
-
-                        <a href="nature-and-adventure.html" class="dropdown-link">
-                            Nature &amp; Adventure
-                        </a>
+                        <a href="transportation.html" class="dropdown-link">Transportation</a>
+                        <a href="wellness.html" class="dropdown-link">Wellness</a>
+                        <a href="nature-and-adventure.html" class="dropdown-link">Nature & Adventure</a>
                     </div>
                 </div>
 
-                <!-- Experience Sri Lanka -->
                 <div class="nav-item">
-                    <a href="experiences.html" class="nav-link">
-                        Experience Sri Lanka
-                    </a>
+                    <a href="experiences.html" class="nav-link">Experience Sri Lanka</a>
 
                     <div class="dropdown-menu">
-                        <a href="experience-nature.html" class="dropdown-link">
-                            Explore Nature
-                        </a>
-
-                        <a href="experience-heritage.html" class="dropdown-link">
-                            Heritage &amp; Culture
-                        </a>
-
-                        <a href="experience-beaches.html" class="dropdown-link">
-                            Beaches &amp; Sunsets
-                        </a>
-
-                        <a href="experience-wildlife.html" class="dropdown-link">
-                            Wildlife &amp; Adventure
-                        </a>
-
-                        <a href="experience-religious.html" class="dropdown-link">
-                            Religious Journeys
-                        </a>
+                        <a href="experience-nature.html" class="dropdown-link">Explore Nature</a>
+                        <a href="experience-heritage.html" class="dropdown-link">Heritage & Culture</a>
+                        <a href="experience-beaches.html" class="dropdown-link">Beaches & Sunsets</a>
+                        <a href="experience-wildlife.html" class="dropdown-link">Wildlife & Adventure</a>
+                        <a href="experience-religious.html" class="dropdown-link">Religious Journeys</a>
                     </div>
                 </div>
 
-                <!-- Travel Guide -->
                 <div class="nav-item">
-                    <a href="travel-guide.html" class="nav-link">
-                        Travel Guide
-                    </a>
+                    <a href="travel-guide.html" class="nav-link">Travel Guide</a>
 
                     <div class="dropdown-menu">
-                        <a href="things-to-do.html" class="dropdown-link">
-                            Things to Do
-                        </a>
-
-                        <a href="foods-drinks.html" class="dropdown-link">
-                            Foods &amp; Drinks
-                        </a>
+                        <a href="things-to-do.html" class="dropdown-link">Things to Do</a>
+                        <a href="foods-drinks.html" class="dropdown-link">Foods & Drinks</a>
                     </div>
                 </div>
 
-                <a href="contact.html" class="nav-link">
-                    Contact
-                </a>
+                <a href="contact.html" class="nav-link">Contact</a>
 
                 <a
                     href="index.html#journey-planner"
@@ -142,7 +273,6 @@
 
             </nav>
 
-            <!-- Mobile Menu Button -->
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -153,78 +283,49 @@
     </header>
 
 
-    <!-- ============================= -->
-    <!-- PAGE BANNER -->
-    <!-- ============================= -->
-
+    <!-- =========================================
+         PAGE BANNER
+    ========================================== -->
     <section
         class="banner"
-        style="
-            background-image: url('https://en.wikipedia.org/wiki/Special:FilePath/Sigiriya_rock_from_a_distance.jpg?width=800');
-            padding: 12rem 0 8rem;
-        "
+        style="background-image: url('https://en.wikipedia.org/wiki/Special:FilePath/Sigiriya_rock_from_a_distance.jpg?width=800'); padding: 12rem 0 8rem;"
     >
-
         <div class="container banner-content reveal">
 
             <h1>Let's Create Your Journey</h1>
 
-            <p
-                style="
-                    font-size: 1.2rem;
-                    max-width: 600px;
-                    margin: 0 auto;
-                "
-            >
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
                 Whether you already know where you want to go or need inspiration,
-                our team is here to help create a Sri Lankan journey that feels
-                uniquely yours.
+                our team is here to help create a Sri Lankan journey that feels uniquely yours.
             </p>
 
         </div>
-
     </section>
 
 
-    <!-- ============================= -->
-    <!-- CONTACT INFORMATION + FORM -->
-    <!-- ============================= -->
-
+    <!-- =========================================
+         CONTACT SECTION
+    ========================================== -->
     <section class="container">
 
         <div class="intro-grid">
 
-            <!-- ========================= -->
-            <!-- CONTACT INFORMATION -->
-            <!-- ========================= -->
-
+            <!-- =================================
+                 CONTACT INFORMATION
+            ================================== -->
             <div class="reveal">
 
-                <span class="section-subtitle">
-                    Get In Touch
-                </span>
+                <span class="section-subtitle">Get In Touch</span>
 
-                <h2 style="margin-bottom: 2rem;">
+                <h2 style="margin-bottom: 2.5rem;">
                     Contact Information
                 </h2>
 
+                <div class="contact-detail">
 
-                <!-- Phone -->
-                <div style="margin-bottom: 2rem;">
+                    <h3>Phone</h3>
 
-                    <h3
-                        style="
-                            font-family: var(--font-body);
-                            font-size: 1rem;
-                            color: var(--ocean-blue);
-                            margin-bottom: 0.5rem;
-                            text-transform: uppercase;
-                        "
-                    >
-                        Phone
-                    </h3>
-
-                    <p style="font-size: 1.2rem;">
+                    <p>
                         <a href="tel:+94779970840">
                             +94 77 99 70 840
                         </a>
@@ -233,22 +334,11 @@
                 </div>
 
 
-                <!-- WhatsApp -->
-                <div style="margin-bottom: 2rem;">
+                <div class="contact-detail">
 
-                    <h3
-                        style="
-                            font-family: var(--font-body);
-                            font-size: 1rem;
-                            color: var(--ocean-blue);
-                            margin-bottom: 0.5rem;
-                            text-transform: uppercase;
-                        "
-                    >
-                        WhatsApp
-                    </h3>
+                    <h3>WhatsApp</h3>
 
-                    <p style="font-size: 1.2rem;">
+                    <p>
                         <a
                             href="https://wa.me/94779970840"
                             target="_blank"
@@ -261,22 +351,11 @@
                 </div>
 
 
-                <!-- Email -->
-                <div style="margin-bottom: 2rem;">
+                <div class="contact-detail">
 
-                    <h3
-                        style="
-                            font-family: var(--font-body);
-                            font-size: 1rem;
-                            color: var(--ocean-blue);
-                            margin-bottom: 0.5rem;
-                            text-transform: uppercase;
-                        "
-                    >
-                        Email
-                    </h3>
+                    <h3>Email</h3>
 
-                    <p style="font-size: 1.2rem;">
+                    <p>
                         <a href="mailto:aventaratravels@gmail.com">
                             aventaratravels@gmail.com
                         </a>
@@ -285,23 +364,27 @@
                 </div>
 
 
-                <!-- Location -->
-                <div style="margin-bottom: 2rem;">
+                <div class="contact-detail">
 
-                    <h3
-                        style="
-                            font-family: var(--font-body);
-                            font-size: 1rem;
-                            color: var(--ocean-blue);
-                            margin-bottom: 0.5rem;
-                            text-transform: uppercase;
-                        "
-                    >
-                        Location
-                    </h3>
+                    <h3>Location</h3>
 
-                    <p style="font-size: 1.2rem;">
+                    <p>
                         Nuwaraeliya Road, Keppetipola
+                    </p>
+
+                </div>
+
+
+                <div style="margin-top: 3rem;">
+
+                    <span class="section-subtitle">
+                        Travel With Confidence
+                    </span>
+
+                    <p style="max-width: 500px;">
+                        From private tours and family holidays to honeymoon journeys,
+                        wildlife experiences and B2B destination services, Aventara Travels
+                        can help design your Sri Lankan experience from arrival to departure.
                     </p>
 
                 </div>
@@ -309,40 +392,31 @@
             </div>
 
 
-            <!-- ========================= -->
-            <!-- CONTACT FORM -->
-            <!-- ========================= -->
+            <!-- =================================
+                 CONTACT FORM
+            ================================== -->
+            <div class="contact-form-card reveal">
 
-            <div
-                class="card reveal"
-                style="padding: 3rem;"
-            >
+                <div class="contact-form-intro">
 
-                <h3 style="margin-bottom: 0.7rem;">
-                    Send us a message
-                </h3>
+                    <h3>Request a Travel Quote</h3>
 
-                <p
-                    style="
-                        margin-bottom: 2rem;
-                        opacity: 0.8;
-                    "
-                >
-                    Tell us about your travel plans and our team will get back
-                    to you with a personalised quotation.
-                </p>
+                    <p>
+                        Tell us a little about your trip and our team will get back to you
+                        with a personalised proposal.
+                    </p>
+
+                </div>
 
 
-                <!-- FORM -->
-
+                <!-- FORM SUBMIT -->
                 <form
-                    class="enquiry-form"
+                    class="contact-form"
                     action="https://formsubmit.co/aventaratravels@gmail.com"
                     method="POST"
-                    id="contactForm"
                 >
 
-                    <!-- FormSubmit Configuration -->
+                    <!-- FormSubmit Settings -->
 
                     <input
                         type="hidden"
@@ -362,21 +436,24 @@
                         value="true"
                     >
 
-                    <!-- ===================== -->
-                    <!-- FULL NAME -->
-                    <!-- ===================== -->
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://aventaratravels.github.io/Aventara-Travels/contact.html?submitted=true"
+                    >
 
+                    <!-- Customer Name -->
                     <div class="form-group">
 
                         <label for="c-name">
-                            Full Name *
+                            Full Name <span>*</span>
                         </label>
 
                         <input
                             type="text"
                             id="c-name"
                             name="full_name"
-                            placeholder="Enter your full name"
+                            placeholder="Your full name"
                             autocomplete="name"
                             required
                         >
@@ -384,21 +461,18 @@
                     </div>
 
 
-                    <!-- ===================== -->
-                    <!-- EMAIL -->
-                    <!-- ===================== -->
-
+                    <!-- Email -->
                     <div class="form-group">
 
                         <label for="c-email">
-                            Email Address *
+                            Email Address <span>*</span>
                         </label>
 
                         <input
                             type="email"
                             id="c-email"
                             name="email"
-                            placeholder="you@example.com"
+                            placeholder="your@email.com"
                             autocomplete="email"
                             required
                         >
@@ -406,10 +480,7 @@
                     </div>
 
 
-                    <!-- ===================== -->
-                    <!-- PHONE -->
-                    <!-- ===================== -->
-
+                    <!-- Phone -->
                     <div class="form-group">
 
                         <label for="c-phone">
@@ -427,19 +498,14 @@
                     </div>
 
 
-                    <!-- ===================== -->
-                    <!-- COUNTRY + TRAVELLERS -->
-                    <!-- ===================== -->
-
+                    <!-- Country + Travellers -->
                     <div class="form-row">
 
-
-                        <!-- COUNTRY -->
-
+                        <!-- Country -->
                         <div class="form-group">
 
                             <label for="c-country">
-                                Country *
+                                Country <span>*</span>
                             </label>
 
                             <select
@@ -448,217 +514,58 @@
                                 required
                             >
 
-                                <option
-                                    value=""
-                                    selected
-                                    disabled
-                                >
+                                <option value="" selected disabled>
                                     Select your country
                                 </option>
 
-                                <option value="Australia">
-                                    Australia
-                                </option>
-
-                                <option value="Austria">
-                                    Austria
-                                </option>
-
-                                <option value="Belgium">
-                                    Belgium
-                                </option>
-
-                                <option value="Brazil">
-                                    Brazil
-                                </option>
-
-                                <option value="Canada">
-                                    Canada
-                                </option>
-
-                                <option value="China">
-                                    China
-                                </option>
-
-                                <option value="Croatia">
-                                    Croatia
-                                </option>
-
-                                <option value="Czech Republic">
-                                    Czech Republic
-                                </option>
-
-                                <option value="Denmark">
-                                    Denmark
-                                </option>
-
-                                <option value="Egypt">
-                                    Egypt
-                                </option>
-
-                                <option value="Finland">
-                                    Finland
-                                </option>
-
-                                <option value="France">
-                                    France
-                                </option>
-
-                                <option value="Germany">
-                                    Germany
-                                </option>
-
-                                <option value="Greece">
-                                    Greece
-                                </option>
-
-                                <option value="Hungary">
-                                    Hungary
-                                </option>
-
-                                <option value="India">
-                                    India
-                                </option>
-
-                                <option value="Indonesia">
-                                    Indonesia
-                                </option>
-
-                                <option value="Ireland">
-                                    Ireland
-                                </option>
-
-                                <option value="Israel">
-                                    Israel
-                                </option>
-
-                                <option value="Italy">
-                                    Italy
-                                </option>
-
-                                <option value="Japan">
-                                    Japan
-                                </option>
-
-                                <option value="Malaysia">
-                                    Malaysia
-                                </option>
-
-                                <option value="Maldives">
-                                    Maldives
-                                </option>
-
-                                <option value="Mexico">
-                                    Mexico
-                                </option>
-
-                                <option value="Netherlands">
-                                    Netherlands
-                                </option>
-
-                                <option value="New Zealand">
-                                    New Zealand
-                                </option>
-
-                                <option value="Norway">
-                                    Norway
-                                </option>
-
-                                <option value="Philippines">
-                                    Philippines
-                                </option>
-
-                                <option value="Poland">
-                                    Poland
-                                </option>
-
-                                <option value="Portugal">
-                                    Portugal
-                                </option>
-
-                                <option value="Qatar">
-                                    Qatar
-                                </option>
-
-                                <option value="Romania">
-                                    Romania
-                                </option>
-
-                                <option value="Russia">
-                                    Russia
-                                </option>
-
-                                <option value="Saudi Arabia">
-                                    Saudi Arabia
-                                </option>
-
-                                <option value="Singapore">
-                                    Singapore
-                                </option>
-
-                                <option value="South Africa">
-                                    South Africa
-                                </option>
-
-                                <option value="South Korea">
-                                    South Korea
-                                </option>
-
-                                <option value="Spain">
-                                    Spain
-                                </option>
-
-                                <option value="Sri Lanka">
-                                    Sri Lanka
-                                </option>
-
-                                <option value="Sweden">
-                                    Sweden
-                                </option>
-
-                                <option value="Switzerland">
-                                    Switzerland
-                                </option>
-
-                                <option value="Thailand">
-                                    Thailand
-                                </option>
-
-                                <option value="Turkey">
-                                    Turkey
-                                </option>
-
-                                <option value="United Arab Emirates">
-                                    United Arab Emirates
-                                </option>
-
-                                <option value="United Kingdom">
-                                    United Kingdom
-                                </option>
-
-                                <option value="United States">
-                                    United States
-                                </option>
-
-                                <option value="Vietnam">
-                                    Vietnam
-                                </option>
-
-                                <option value="Other">
-                                    Other
-                                </option>
+                                <option value="Australia">Australia</option>
+                                <option value="Austria">Austria</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="Canada">Canada</option>
+                                <option value="China">China</option>
+                                <option value="Czech Republic">Czech Republic</option>
+                                <option value="Denmark">Denmark</option>
+                                <option value="Finland">Finland</option>
+                                <option value="France">France</option>
+                                <option value="Germany">Germany</option>
+                                <option value="India">India</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Ireland">Ireland</option>
+                                <option value="Israel">Israel</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Maldives">Maldives</option>
+                                <option value="Netherlands">Netherlands</option>
+                                <option value="New Zealand">New Zealand</option>
+                                <option value="Norway">Norway</option>
+                                <option value="Philippines">Philippines</option>
+                                <option value="Poland">Poland</option>
+                                <option value="Russia">Russia</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="South Korea">South Korea</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="Switzerland">Switzerland</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="United Arab Emirates">United Arab Emirates</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="United States">United States</option>
+                                <option value="Vietnam">Vietnam</option>
+                                <option value="Other">Other</option>
 
                             </select>
 
                         </div>
 
 
-                        <!-- TRAVELLERS -->
-
+                        <!-- Number of Travellers -->
                         <div class="form-group">
 
                             <label for="c-travellers">
-                                Number of Travellers *
+                                Number of Travellers <span>*</span>
                             </label>
 
                             <select
@@ -667,65 +574,31 @@
                                 required
                             >
 
-                                <option
-                                    value=""
-                                    selected
-                                    disabled
-                                >
-                                    Select
+                                <option value="" selected disabled>
+                                    Select number
                                 </option>
 
-                                <option value="1">
-                                    1 Traveller
-                                </option>
-
-                                <option value="2">
-                                    2 Travellers
-                                </option>
-
-                                <option value="3">
-                                    3 Travellers
-                                </option>
-
-                                <option value="4">
-                                    4 Travellers
-                                </option>
-
-                                <option value="5">
-                                    5 Travellers
-                                </option>
-
-                                <option value="6">
-                                    6 Travellers
-                                </option>
-
-                                <option value="7">
-                                    7 Travellers
-                                </option>
-
-                                <option value="8">
-                                    8 Travellers
-                                </option>
-
-                                <option value="9">
-                                    9 Travellers
-                                </option>
-
-                                <option value="10">
-                                    10 Travellers
-                                </option>
-
-                                <option value="11-15">
-                                    11–15 Travellers
-                                </option>
-
-                                <option value="16-20">
-                                    16–20 Travellers
-                                </option>
-
-                                <option value="21+">
-                                    21+ Travellers
-                                </option>
+                                <option value="1">1 Traveller</option>
+                                <option value="2">2 Travellers</option>
+                                <option value="3">3 Travellers</option>
+                                <option value="4">4 Travellers</option>
+                                <option value="5">5 Travellers</option>
+                                <option value="6">6 Travellers</option>
+                                <option value="7">7 Travellers</option>
+                                <option value="8">8 Travellers</option>
+                                <option value="9">9 Travellers</option>
+                                <option value="10">10 Travellers</option>
+                                <option value="11">11 Travellers</option>
+                                <option value="12">12 Travellers</option>
+                                <option value="13">13 Travellers</option>
+                                <option value="14">14 Travellers</option>
+                                <option value="15">15 Travellers</option>
+                                <option value="16">16 Travellers</option>
+                                <option value="17">17 Travellers</option>
+                                <option value="18">18 Travellers</option>
+                                <option value="19">19 Travellers</option>
+                                <option value="20">20 Travellers</option>
+                                <option value="21+">21+ Travellers</option>
 
                             </select>
 
@@ -734,87 +607,177 @@
                     </div>
 
 
-                    <!-- ===================== -->
-                    <!-- TRAVEL DATE -->
-                    <!-- ===================== -->
-
+                    <!-- Travel Date -->
                     <div class="form-group">
 
                         <label for="c-date">
-                            Preferred Travel Date *
+                            Preferred Travel Date <span>*</span>
                         </label>
 
-                        <input
-                            type="date"
-                            id="c-date"
-                            name="travel_date"
-                            required
-                        >
+                        <div class="date-wrapper">
+
+                            <input
+                                type="date"
+                                id="c-date"
+                                name="travel_date"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="required-note">
+                            Select your expected arrival/travel date.
+                        </div>
 
                     </div>
 
 
-                    <!-- ===================== -->
-                    <!-- MESSAGE -->
-                    <!-- ===================== -->
+                    <!-- Tour Type -->
+                    <div class="form-group">
 
+                        <label for="c-tour-type">
+                            Type of Journey
+                        </label>
+
+                        <select
+                            id="c-tour-type"
+                            name="tour_type"
+                        >
+
+                            <option value="" selected>
+                                Select journey type
+                            </option>
+
+                            <option value="Private Tour">
+                                Private Tour
+                            </option>
+
+                            <option value="Honeymoon">
+                                Honeymoon
+                            </option>
+
+                            <option value="Family Holiday">
+                                Family Holiday
+                            </option>
+
+                            <option value="Luxury Holiday">
+                                Luxury Holiday
+                            </option>
+
+                            <option value="Wildlife & Safari">
+                                Wildlife & Safari
+                            </option>
+
+                            <option value="Adventure">
+                                Adventure
+                            </option>
+
+                            <option value="Beach Holiday">
+                                Beach Holiday
+                            </option>
+
+                            <option value="Cultural & Heritage">
+                                Cultural & Heritage
+                            </option>
+
+                            <option value="Wellness">
+                                Wellness
+                            </option>
+
+                            <option value="B2B / Travel Agency">
+                                B2B / Travel Agency
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Estimated Duration -->
+                    <div class="form-group">
+
+                        <label for="c-duration">
+                            Approximate Trip Duration
+                        </label>
+
+                        <select
+                            id="c-duration"
+                            name="trip_duration"
+                        >
+
+                            <option value="" selected>
+                                Select duration
+                            </option>
+
+                            <option value="1-3 days">1–3 days</option>
+                            <option value="4-6 days">4–6 days</option>
+                            <option value="7-9 days">7–9 days</option>
+                            <option value="10-14 days">10–14 days</option>
+                            <option value="15-21 days">15–21 days</option>
+                            <option value="22+ days">22+ days</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Message -->
                     <div class="form-group">
 
                         <label for="c-message">
-                            Tell us about your journey *
+                            Tell Us About Your Trip <span>*</span>
                         </label>
 
                         <textarea
                             id="c-message"
                             name="message"
                             rows="5"
-                            placeholder="Tell us your preferred destinations, interests, hotel preferences, activities or any special requirements..."
+                            placeholder="Tell us where you would like to visit, your interests, hotel preferences, activities, budget or anything else you would like us to know..."
                             required
                         ></textarea>
 
                     </div>
 
 
-                    <!-- ===================== -->
-                    <!-- GOOGLE reCAPTCHA -->
-                    <!-- ===================== -->
-
-                    <div
-                        class="form-group"
-                        style="
-                            margin-top: 1.5rem;
-                            margin-bottom: 1.5rem;
-                        "
-                    >
+                    <!-- reCAPTCHA -->
+                    <div class="captcha-wrapper">
 
                         <div
                             class="g-recaptcha"
-                            data-sitekey="6LdijIMtAAAAAGNTpctZzZp8gKl2mnbnZDdixeqz"
+                            data-sitekey="6LcCloMtAAAAAFr0U-dnAw4r3V4ehv25YL5HAYxn"
+                            data-action="CONTACT"
                         ></div>
 
                     </div>
 
 
-                    <!-- ===================== -->
-                    <!-- SUBMIT BUTTON -->
-                    <!-- ===================== -->
-
-                    <button
-                        type="submit"
-                        class="btn btn-primary"
-                        id="submitButton"
-                        style="width: 100%;"
-                    >
-                        SEND ENQUIRY
-                    </button>
+                    <!-- Required note -->
+                    <div class="required-note">
+                        * Required fields
+                    </div>
 
 
-                    <!-- FORM MESSAGE -->
+                    <!-- Submit -->
+                    <div class="submit-wrapper">
 
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            SEND ENQUIRY
+                        </button>
+
+                    </div>
+
+
+                    <!-- Message -->
                     <div
                         class="form-message"
-                        id="formMessage"
-                        style="margin-top: 1rem;"
+                        aria-live="polite"
                     ></div>
 
                 </form>
@@ -826,10 +789,9 @@
     </section>
 
 
-    <!-- ============================= -->
-    <!-- FAQ SECTION -->
-    <!-- ============================= -->
-
+    <!-- =========================================
+         FAQ
+    ========================================== -->
     <section class="bg-sand">
 
         <div class="container reveal">
@@ -849,25 +811,14 @@
 
             <div
                 class="accordion"
-                style="
-                    max-width: 800px;
-                    margin: 3rem auto 0;
-                "
+                style="max-width: 800px; margin: 3rem auto 0;"
             >
 
-
-                <!-- FAQ 1 -->
-
                 <div class="accordion-item">
 
                     <div class="accordion-header">
-
                         Can you create tailor-made itineraries?
-
-                        <span class="accordion-icon">
-                            +
-                        </span>
-
+                        <span class="accordion-icon">+</span>
                     </div>
 
                     <div class="accordion-content">
@@ -875,9 +826,8 @@
                         <div class="accordion-content-inner">
 
                             <p>
-                                Yes. Every journey can be customised according
-                                to your interests, travel dates, preferred
-                                experiences and budget.
+                                Yes. Every journey can be customised according to your interests,
+                                travel dates, preferred experiences and budget.
                             </p>
 
                         </div>
@@ -887,18 +837,11 @@
                 </div>
 
 
-                <!-- FAQ 2 -->
-
                 <div class="accordion-item">
 
                     <div class="accordion-header">
-
                         Do you arrange private tours?
-
-                        <span class="accordion-icon">
-                            +
-                        </span>
-
+                        <span class="accordion-icon">+</span>
                     </div>
 
                     <div class="accordion-content">
@@ -906,9 +849,8 @@
                         <div class="accordion-content-inner">
 
                             <p>
-                                Yes. Private journeys with dedicated
-                                transportation and professional local
-                                assistance can be arranged.
+                                Yes. Private journeys with dedicated transportation and
+                                professional local assistance can be arranged.
                             </p>
 
                         </div>
@@ -918,18 +860,11 @@
                 </div>
 
 
-                <!-- FAQ 3 -->
-
                 <div class="accordion-item">
 
                     <div class="accordion-header">
-
                         Can you arrange honeymoon holidays?
-
-                        <span class="accordion-icon">
-                            +
-                        </span>
-
+                        <span class="accordion-icon">+</span>
                     </div>
 
                     <div class="accordion-content">
@@ -937,8 +872,8 @@
                         <div class="accordion-content-inner">
 
                             <p>
-                                Yes. We create romantic and personalised
-                                honeymoon journeys across Sri Lanka.
+                                Yes. We create romantic and personalised honeymoon journeys
+                                across Sri Lanka.
                             </p>
 
                         </div>
@@ -948,18 +883,11 @@
                 </div>
 
 
-                <!-- FAQ 4 -->
-
                 <div class="accordion-item">
 
                     <div class="accordion-header">
-
                         Do you arrange wildlife safaris?
-
-                        <span class="accordion-icon">
-                            +
-                        </span>
-
+                        <span class="accordion-icon">+</span>
                     </div>
 
                     <div class="accordion-content">
@@ -967,8 +895,8 @@
                         <div class="accordion-content-inner">
 
                             <p>
-                                Yes. Wildlife experiences and safari programs
-                                can be incorporated into your itinerary.
+                                Yes. Wildlife experiences and safari programs can be
+                                incorporated into your itinerary.
                             </p>
 
                         </div>
@@ -978,18 +906,11 @@
                 </div>
 
 
-                <!-- FAQ 5 -->
-
                 <div class="accordion-item">
 
                     <div class="accordion-header">
-
                         Can you arrange family holidays?
-
-                        <span class="accordion-icon">
-                            +
-                        </span>
-
+                        <span class="accordion-icon">+</span>
                     </div>
 
                     <div class="accordion-content">
@@ -997,8 +918,8 @@
                         <div class="accordion-content-inner">
 
                             <p>
-                                Yes. We can create comfortable and family-friendly
-                                itineraries suitable for different age groups.
+                                Yes. We can create comfortable and family-friendly itineraries
+                                suitable for different age groups.
                             </p>
 
                         </div>
@@ -1008,18 +929,11 @@
                 </div>
 
 
-                <!-- FAQ 6 -->
-
                 <div class="accordion-item">
 
                     <div class="accordion-header">
-
                         Can Aventara arrange accommodation and transportation?
-
-                        <span class="accordion-icon">
-                            +
-                        </span>
-
+                        <span class="accordion-icon">+</span>
                     </div>
 
                     <div class="accordion-content">
@@ -1027,9 +941,8 @@
                         <div class="accordion-content-inner">
 
                             <p>
-                                Yes. We coordinate carefully selected
-                                accommodation, transportation and destination
-                                services as part of your journey.
+                                Yes. We coordinate carefully selected accommodation,
+                                transportation and destination services as part of your journey.
                             </p>
 
                         </div>
@@ -1039,18 +952,11 @@
                 </div>
 
 
-                <!-- FAQ 7 -->
-
                 <div class="accordion-item">
 
                     <div class="accordion-header">
-
                         Do you work with international travel companies?
-
-                        <span class="accordion-icon">
-                            +
-                        </span>
-
+                        <span class="accordion-icon">+</span>
                     </div>
 
                     <div class="accordion-content">
@@ -1058,10 +964,9 @@
                         <div class="accordion-content-inner">
 
                             <p>
-                                Yes. Aventara also works with international tour
-                                operators, travel agencies and B2B partners for
-                                dependable destination and ground-handling
-                                services in Sri Lanka.
+                                Yes. Aventara also works with international tour operators,
+                                travel agencies and B2B partners for dependable destination
+                                and ground-handling services in Sri Lanka.
                             </p>
 
                         </div>
@@ -1077,46 +982,32 @@
     </section>
 
 
-    <!-- ============================= -->
-    <!-- FOOTER -->
-    <!-- ============================= -->
-
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
     <footer>
 
         <div class="container">
 
             <div class="footer-grid">
 
-
-                <!-- Brand -->
-
                 <div class="footer-col">
 
                     <h3
                         class="footer-heading"
-                        style="
-                            font-family: var(--font-heading);
-                            color: var(--off-white);
-                            font-size: 1.5rem;
-                        "
+                        style="font-family: var(--font-heading); color: var(--off-white); font-size: 1.5rem;"
                     >
                         AVENTARA TRAVELS
                     </h3>
 
                     <p
-                        style="
-                            color: var(--warm-gold);
-                            font-size: 0.9rem;
-                            letter-spacing: 1px;
-                        "
+                        style="color: var(--warm-gold); font-size: 0.9rem; letter-spacing: 1px;"
                     >
                         Curated Journeys, Unforgettable Memories.
                     </p>
 
                 </div>
 
-
-                <!-- Explore -->
 
                 <div class="footer-col">
 
@@ -1127,41 +1018,29 @@
                     <ul class="footer-links">
 
                         <li>
-                            <a href="index.html">
-                                Home
-                            </a>
+                            <a href="index.html">Home</a>
                         </li>
 
                         <li>
-                            <a href="about.html">
-                                About Us
-                            </a>
+                            <a href="about.html">About Us</a>
                         </li>
 
                         <li>
-                            <a href="destinations.html">
-                                Destinations
-                            </a>
+                            <a href="destinations.html">Destinations</a>
                         </li>
 
                         <li>
-                            <a href="experiences.html">
-                                Experiences
-                            </a>
+                            <a href="experiences.html">Experiences</a>
                         </li>
 
                         <li>
-                            <a href="tours.html">
-                                Tours
-                            </a>
+                            <a href="tours.html">Tours</a>
                         </li>
 
                     </ul>
 
                 </div>
 
-
-                <!-- Plan Your Journey -->
 
                 <div class="footer-col">
 
@@ -1193,8 +1072,6 @@
 
                 </div>
 
-
-                <!-- Connect -->
 
                 <div class="footer-col">
 
@@ -1233,11 +1110,7 @@
                     </ul>
 
 
-                    <!-- Social Links -->
-
                     <div class="social-links">
-
-                        <!-- Facebook -->
 
                         <a
                             href="https://www.facebook.com/share/197h6vNKG1/?mibextid=wwXIfr"
@@ -1254,17 +1127,11 @@
                                 stroke="currentColor"
                                 stroke-width="2"
                             >
-
-                                <path
-                                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                                />
-
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                             </svg>
 
                         </a>
 
-
-                        <!-- Instagram -->
 
                         <a
                             href="https://www.instagram.com/aventaratravels?igsh=MTZwbDJjaGkwYjViNQ%3D%3D&utm_source=qr"
@@ -1288,7 +1155,6 @@
                                     width="20"
                                     height="20"
                                     rx="5"
-                                    ry="5"
                                 />
 
                                 <path
@@ -1313,8 +1179,6 @@
             </div>
 
 
-            <!-- Footer Bottom -->
-
             <div class="footer-bottom">
 
                 <p>
@@ -1328,7 +1192,7 @@
                     </a>
 
                     <a href="terms.html">
-                        Terms &amp; Conditions
+                        Terms & Conditions
                     </a>
 
                 </div>
@@ -1340,117 +1204,59 @@
     </footer>
 
 
-    <!-- ============================= -->
-    <!-- JAVASCRIPT -->
-    <!-- ============================= -->
-
+    <!-- Main JavaScript -->
     <script src="js/script.js"></script>
 
 
-    <!-- ============================= -->
-    <!-- CONTACT FORM SCRIPT -->
-    <!-- ============================= -->
-
+    <!-- =========================================
+         FORM DATE + SUCCESS MESSAGE
+    ========================================== -->
     <script>
 
         document.addEventListener("DOMContentLoaded", function () {
 
-            /* ---------------------------------
-               SET MINIMUM TRAVEL DATE
-            --------------------------------- */
+            /* Prevent selecting dates in the past */
+            const dateInput = document.getElementById("c-date");
 
-            const travelDate = document.getElementById("c-date");
-
-            if (travelDate) {
+            if (dateInput) {
 
                 const today = new Date();
 
                 const year = today.getFullYear();
 
-                const month = String(
-                    today.getMonth() + 1
-                ).padStart(2, "0");
+                const month = String(today.getMonth() + 1).padStart(2, "0");
 
-                const day = String(
-                    today.getDate()
-                ).padStart(2, "0");
+                const day = String(today.getDate()).padStart(2, "0");
 
-                travelDate.min =
-                    `${year}-${month}-${day}`;
+                dateInput.min = `${year}-${month}-${day}`;
+
             }
 
 
-            /* ---------------------------------
-               FORM VALIDATION
-            --------------------------------- */
+            /* Show confirmation after FormSubmit redirect */
+            const params = new URLSearchParams(window.location.search);
 
-            const form =
-                document.getElementById("contactForm");
+            if (params.get("submitted") === "true") {
 
-            const submitButton =
-                document.getElementById("submitButton");
+                const formMessage = document.querySelector(".form-message");
 
-            const formMessage =
-                document.getElementById("formMessage");
+                if (formMessage) {
 
+                    formMessage.className = "form-message success";
 
-            if (!form) {
-                return;
+                    formMessage.textContent =
+                        "Thank you. Your enquiry has been received. Aventara Travels will contact you shortly.";
+
+                }
+
             }
-
-
-            form.addEventListener("submit", function (event) {
-
-                /* Check reCAPTCHA */
-
-                if (
-                    typeof grecaptcha !== "undefined"
-                ) {
-
-                    const captchaResponse =
-                        grecaptcha.getResponse();
-
-                    if (!captchaResponse) {
-
-                        event.preventDefault();
-
-                        formMessage.textContent =
-                            "Please complete the reCAPTCHA verification before sending your enquiry.";
-
-                        formMessage.style.color =
-                            "#b42318";
-
-                        formMessage.style.marginTop =
-                            "1rem";
-
-                        return;
-                    }
-
-                }
-
-
-                /* Disable button */
-
-                if (submitButton) {
-
-                    submitButton.disabled = true;
-
-                    submitButton.textContent =
-                        "SENDING...";
-
-                }
-
-            });
 
         });
 
     </script>
 
 
-    <!-- ============================= -->
-    <!-- FLOATING SHARE BUTTON -->
-    <!-- ============================= -->
-
+    <!-- Floating Share Button -->
     <button
         class="floating-share"
         id="shareBtn"
@@ -1504,3 +1310,4 @@
 
 </body>
 </html>
+```
