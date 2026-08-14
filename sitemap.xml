@@ -1,35 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://aventaratravels.com/</loc></url>
-<url><loc>https://aventaratravels.com/about.html</loc></url>
-<url><loc>https://aventaratravels.com/tours.html</loc></url>
-<url><loc>https://aventaratravels.com/destinations.html</loc></url>
-<url><loc>https://aventaratravels.com/experiences.html</loc></url>
-<url><loc>https://aventaratravels.com/travel-guide.html</loc></url>
-<url><loc>https://aventaratravels.com/contact.html</loc></url>
-<url><loc>https://aventaratravels.com/our-expertise.html</loc></url>
-<url><loc>https://aventaratravels.com/transportation.html</loc></url>
-<url><loc>https://aventaratravels.com/wellness.html</loc></url>
-<url><loc>https://aventaratravels.com/nature-and-adventure.html</loc></url>
-<url><loc>https://aventaratravels.com/experience-nature.html</loc></url>
-<url><loc>https://aventaratravels.com/experience-heritage.html</loc></url>
-<url><loc>https://aventaratravels.com/experience-beaches.html</loc></url>
-<url><loc>https://aventaratravels.com/experience-wildlife.html</loc></url>
-<url><loc>https://aventaratravels.com/experience-religious.html</loc></url>
-<url><loc>https://aventaratravels.com/things-to-do.html</loc></url>
-<url><loc>https://aventaratravels.com/foods-drinks.html</loc></url>
-<url><loc>https://aventaratravels.com/india.html</loc></url>
-<url><loc>https://aventaratravels.com/uk.html</loc></url>
-<url><loc>https://aventaratravels.com/germany.html</loc></url>
-<url><loc>https://aventaratravels.com/australia.html</loc></url>
-<url><loc>https://aventaratravels.com/china.html</loc></url>
-<url><loc>https://aventaratravels.com/france.html</loc></url>
-<url><loc>https://aventaratravels.com/italy.html</loc></url>
-<url><loc>https://aventaratravels.com/switzerland.html</loc></url>
-<url><loc>https://aventaratravels.com/usa.html</loc></url>
-<url><loc>https://aventaratravels.com/canada.html</loc></url>
-<url><loc>https://aventaratravels.com/netherlands.html</loc></url>
-<url><loc>https://aventaratravels.com/sri-lanka-tours-from-poland.html</loc></url>
-<url><loc>https://aventaratravels.com/privacy.html</loc></url>
-<url><loc>https://aventaratravels.com/terms.html</loc></url>
+
+    <url>
+        <loc>https://aventaratravels.com/</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/about.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/tours.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/destinations.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/experiences.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/travel-guide.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/contact.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/our-expertise.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/transportation.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/wellness.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/nature-and-adventure.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/experience-nature.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/experience-heritage.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/experience-beaches.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/experience-wildlife.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/experience-religious.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/things-to-do.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/foods-drinks.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/india.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/uk.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/germany.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/australia.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/china.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/france.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/italy.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/switzerland.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/usa.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/canada.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/netherlands.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/poland.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/privacy.html</loc>
+    </url>
+
+    <url>
+        <loc>https://aventaratravels.com/terms.html</loc>
+    </url>
+
 </urlset>
