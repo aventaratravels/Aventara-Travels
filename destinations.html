@@ -4,25 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sri Lanka Destinations Guide | Aventara Travels DMC</title>
+    <title>Iconic Sri Lankan Destinations | Aventara Travels</title>
 
-    <meta name="description" content="Discover Sri Lanka's top travel destinations: Sigiriya, Kandy, Nuwara Eliya, Ella, Galle Fort, Yala National Park, Mirissa Beach, and Anuradhapura.">
-    <meta name="keywords" content="Sri Lanka destinations, Sigiriya Rock, Kandy, Ella Nine Arch, Galle Fort, Yala Safari, Mirissa Beach">
+    <meta name="description" content="Explore the top travel destinations in Sri Lanka: Sigiriya, Ella, Kandy, Nuwara Eliya, Yala National Park, Galle Fort, and Mirissa with Aventara Travels Sri Lanka.">
+    <meta name="keywords" content="Sri Lanka travel destinations, Sigiriya Rock, Ella Nine Arch, Kandy Tooth Temple, Yala Safari, Galle Fort, Mirissa Beach, Nuwara Eliya Tea Country">
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://aventaratravels.com/destinations.html">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Sri Lanka Destinations | Aventara Travels">
-    <meta property="og:description" content="Explore ancient fortresses, highland tea estates, national parks, and tropical beaches across Sri Lanka.">
+    <meta property="og:title" content="Iconic Sri Lankan Destinations | Aventara Travels">
+    <meta property="og:description" content="Discover the ancient heritage, misty tea mountains, wild leopard national parks, and tropical beaches of Sri Lanka with local experts.">
     <meta property="og:url" content="https://aventaratravels.com/destinations.html">
     <meta property="og:image" content="https://aventaratravels.com/assets/images/sigiriya_rock_fortress.jpg">
 
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .destination-grid-detailed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .dest-card-full {
+            background: var(--color-bg-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dest-card-full:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-ocean-primary);
+        }
+
+        .dest-card-img {
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .dest-card-content {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .dest-tag {
+            font-size: 0.775rem;
+            font-weight: 700;
+            color: var(--color-ocean-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.4rem;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- TOP UTILITY BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-info">
+                <a href="mailto:aventaratravels@gmail.com">✉️ aventaratravels@gmail.com</a>
+                <a href="tel:+94779970840">📞 +94 77 99 70 840</a>
+                <a href="https://wa.me/94779970840" target="_blank" rel="noopener" style="color:var(--color-whatsapp);font-weight:600;">💬 WhatsApp Online 24/7</a>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:1rem;">
+                <span class="currency-badge">USD ($)</span>
+                <span>Licensed Sri Lanka DMC</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SITE HEADER -->
     <header class="site-header">
         <div class="container header-container">
             <a href="index.html" class="logo-link">
@@ -32,15 +95,33 @@
             <nav class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About Us</a>
-                <a href="tours.html" class="nav-link">Tours</a>
-                <a href="destinations.html" class="nav-link active">Destinations</a>
+
+                <div class="nav-item">
+                    <a href="tours.html" class="nav-link">Holidays & Tours ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="tours.html" class="dropdown-link">All Tours</a>
+                        <a href="tour-cultural-highlights.html" class="dropdown-link">Cultural Tours</a>
+                        <a href="tour-wildlife-adventure.html" class="dropdown-link">Wildlife Safaris</a>
+                        <a href="tour-sri-lanka-honeymoon-tours.html" class="dropdown-link">Honeymoon Escapes</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="destinations.html" class="nav-link active">Destinations ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="destinations.html" class="dropdown-link">All Destinations</a>
+                        <a href="destination-kandy.html" class="dropdown-link">Kandy Sacred City</a>
+                        <a href="destination-sigiriya.html" class="dropdown-link">Sigiriya Rock</a>
+                        <a href="destination-ella.html" class="dropdown-link">Ella & Nine Arch</a>
+                        <a href="destination-galle.html" class="dropdown-link">Galle Fort</a>
+                    </div>
+                </div>
+
                 <a href="experiences.html" class="nav-link">Experiences</a>
                 <a href="travel-guide.html" class="nav-link">Travel Guide</a>
                 <a href="contact.html" class="nav-link">Contact</a>
 
-                <a href="index.html#journey-planner" class="btn btn-glass-primary">
-                    Plan Your Journey
-                </a>
+                <a href="index.html#journey-planner" class="btn btn-ocean">GET A QUOTE</a>
             </nav>
 
             <div class="hamburger">
@@ -49,92 +130,153 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="hero-section" style="min-height:50vh;background-image: url('assets/images/nine_arch_bridge_ella.jpg');">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="section-tagline">EXPLORE THE RESPLENDENT ISLAND</span>
-            <h1 class="hero-title">Sri Lanka Destinations</h1>
-            <p class="hero-subtitle">From ancient UNESCO rock fortresses to misty tea hills and turquoise ocean bays.</p>
+    <!-- BANNER -->
+    <section class="section-padding-sm" style="background:var(--color-ocean-light);">
+        <div class="container text-center">
+            <span class="section-tagline">EXPLORE THE WONDERS OF SRI LANKA</span>
+            <h1 class="section-title">Iconic Destinations</h1>
+            <p class="section-description" style="max-width:720px;margin:0 auto;">
+                From UNESCO ancient rock fortresses to misty tea estates and golden tropical beaches. Discover the distinct character, cultural value, and charm of Sri Lanka's top tourist destinations.
+            </p>
         </div>
     </section>
 
-    <!-- Destinations Grid -->
-    <section class="section-padding bg-sand">
+    <!-- DESTINATIONS GRID WITH FULL EXPLANATION & VALUE -->
+    <section class="section-padding">
         <div class="container">
-            <div class="cards-grid-3">
+            <div class="destination-grid-detailed">
 
-                <!-- Sigiriya -->
-                <a href="destination-sigiriya.html" class="destination-card">
-                    <img src="assets/images/sigiriya_rock_fortress.jpg" alt="Sigiriya Rock Fortress">
-                    <div class="destination-overlay">
-                        <span class="destination-sub">Cultural Triangle</span>
-                        <h3 class="destination-title">Sigiriya Rock Fortress</h3>
+                <!-- 1. Sigiriya Rock Citadel -->
+                <div class="dest-card-full">
+                    <img src="assets/images/sigiriya_rock_fortress.jpg" alt="Sigiriya Rock Citadel Sri Lanka" class="dest-card-img">
+                    <div class="dest-card-content">
+                        <span class="dest-tag">UNESCO World Heritage • Central Province</span>
+                        <h3 style="font-size:1.4rem;margin-bottom:0.6rem;">Sigiriya Rock Fortress</h3>
+                        <p style="font-size:0.875rem;color:var(--color-text-sub);line-height:1.6;margin-bottom:1.25rem;flex-grow:1;">
+                            <strong>Cultural Value & Importance:</strong> Often referred to as the 8th Wonder of the World, Sigiriya is a massive 200-meter-high granite rock fortress built by King Kasyapa in the 5th century AD. It features ancient frescoes of heavenly maidens, the iconic Lion Gate paws, water gardens, and panoramic views over emerald jungle canopy.
+                        </p>
+                        <a href="destination-sigiriya.html" class="btn btn-outline-ocean" style="align-self:flex-start;padding:0.45rem 1.2rem;font-size:0.8rem;">EXPLORE SIGIRIYA &rarr;</a>
                     </div>
-                </a>
+                </div>
 
-                <!-- Ella -->
-                <a href="destination-ella.html" class="destination-card">
-                    <img src="assets/images/nine_arch_bridge_ella.jpg" alt="Ella & Nine Arch Bridge">
-                    <div class="destination-overlay">
-                        <span class="destination-sub">Misty Highlands</span>
-                        <h3 class="destination-title">Ella & Nine Arch</h3>
+                <!-- 2. Ella & Nine Arch Bridge -->
+                <div class="dest-card-full">
+                    <img src="assets/images/nine_arch_bridge_ella.jpg" alt="Ella Nine Arch Bridge Sri Lanka" class="dest-card-img">
+                    <div class="dest-card-content">
+                        <span class="dest-tag">Misty Highlands • Badulla District</span>
+                        <h3 style="font-size:1.4rem;margin-bottom:0.6rem;">Ella & Nine Arch Bridge</h3>
+                        <p style="font-size:0.875rem;color:var(--color-text-sub);line-height:1.6;margin-bottom:1.25rem;flex-grow:1;">
+                            <strong>Place Value & Experience:</strong> Nestled in mountain tea country, Ella is world-famous for its dramatic hiking trails (Little Adam's Peak & Ella Rock), waterfalls, and the colonial-era Nine Arch Bridge where trains curve through lush forest ravines. It is the ultimate mountain retreat for couples, hikers, and nature lovers.
+                        </p>
+                        <a href="destination-ella.html" class="btn btn-outline-ocean" style="align-self:flex-start;padding:0.45rem 1.2rem;font-size:0.8rem;">EXPLORE ELLA &rarr;</a>
                     </div>
-                </a>
+                </div>
 
-                <!-- Yala -->
-                <a href="destination-yala.html" class="destination-card">
-                    <img src="assets/images/yala_wildlife_leopard.jpg" alt="Yala National Park">
-                    <div class="destination-overlay">
-                        <span class="destination-sub">Wildlife & Safaris</span>
-                        <h3 class="destination-title">Yala National Park</h3>
+                <!-- 3. Yala National Park -->
+                <div class="dest-card-full">
+                    <img src="assets/images/yala_wildlife_leopard.jpg" alt="Yala National Park Safari Sri Lanka" class="dest-card-img">
+                    <div class="dest-card-content">
+                        <span class="dest-tag">Wildlife Sanctuary • Southern & Uva</span>
+                        <h3 style="font-size:1.4rem;margin-bottom:0.6rem;">Yala National Park</h3>
+                        <p style="font-size:0.875rem;color:var(--color-text-sub);line-height:1.6;margin-bottom:1.25rem;flex-grow:1;">
+                            <strong>Wildlife Value & Safari Quality:</strong> Yala boasts one of the highest leopard densities in the world. Visitors experience 4x4 open-top jeep safaris tracking Sri Lankan leopards, wild Asian elephant herds, sloth bears, crocodiles, and over 215 species of coastal and forest birds.
+                        </p>
+                        <a href="destination-yala.html" class="btn btn-outline-ocean" style="align-self:flex-start;padding:0.45rem 1.2rem;font-size:0.8rem;">EXPLORE YALA &rarr;</a>
                     </div>
-                </a>
+                </div>
 
-                <!-- Mirissa -->
-                <a href="destination-mirissa.html" class="destination-card">
-                    <img src="assets/images/mirissa_tropical_beach.jpg" alt="Mirissa Beach">
-                    <div class="destination-overlay">
-                        <span class="destination-sub">Southern Coast</span>
-                        <h3 class="destination-title">Mirissa & Weligama</h3>
+                <!-- 4. Galle Dutch Fort -->
+                <div class="dest-card-full">
+                    <img src="assets/images/mirissa_tropical_beach.jpg" alt="Galle Dutch Fort Coastal Sri Lanka" class="dest-card-img">
+                    <div class="dest-card-content">
+                        <span class="dest-tag">UNESCO Heritage • Southern Coast</span>
+                        <h3 style="font-size:1.4rem;margin-bottom:0.6rem;">Galle Fort & Coast</h3>
+                        <p style="font-size:0.875rem;color:var(--color-text-sub);line-height:1.6;margin-bottom:1.25rem;flex-grow:1;">
+                            <strong>Colonial Heritage Value:</strong> Built by the Portuguese in 1588 and fortified by the Dutch, Galle Fort is a living UNESCO fortress. Its cobbled stone ramparts, oceanfront light house, boutique jewelers, art galleries, and gelato cafes overlook the turquoise Indian Ocean.
+                        </p>
+                        <a href="destination-galle.html" class="btn btn-outline-ocean" style="align-self:flex-start;padding:0.45rem 1.2rem;font-size:0.8rem;">EXPLORE GALLE &rarr;</a>
                     </div>
-                </a>
+                </div>
 
-                <!-- Kandy -->
-                <a href="destination-kandy.html" class="destination-card">
-                    <img src="assets/images/cultural_highlights_tour.jpg" alt="Kandy Cultural Capital">
-                    <div class="destination-overlay">
-                        <span class="destination-sub">Royal Kingdom</span>
-                        <h3 class="destination-title">Kandy Sacred City</h3>
+                <!-- 5. Kandy Sacred City -->
+                <div class="dest-card-full">
+                    <img src="assets/images/cultural_highlights_tour.jpg" alt="Kandy Temple of Tooth Sri Lanka" class="dest-card-img">
+                    <div class="dest-card-content">
+                        <span class="dest-tag">Sacred Kingdom • Central Highlands</span>
+                        <h3 style="font-size:1.4rem;margin-bottom:0.6rem;">Kandy Sacred City</h3>
+                        <p style="font-size:0.875rem;color:var(--color-text-sub);line-height:1.6;margin-bottom:1.25rem;flex-grow:1;">
+                            <strong>Sacred Buddhist Capital:</strong> The last royal capital of Sri Lankan kings, Kandy houses the Temple of the Sacred Tooth Relic (Sri Dalada Maligawa). Surrounded by misty hills, tea gardens, and Kandy Lake, it is the spiritual heart of Sri Lanka.
+                        </p>
+                        <a href="destination-kandy.html" class="btn btn-outline-ocean" style="align-self:flex-start;padding:0.45rem 1.2rem;font-size:0.8rem;">EXPLORE KANDY &rarr;</a>
                     </div>
-                </a>
+                </div>
 
-                <!-- Nuwara Eliya -->
-                <a href="destination-nuwara-eliya.html" class="destination-card">
-                    <img src="assets/images/cycling_tour_sri_lanka.jpg" alt="Nuwara Eliya Tea Country">
-                    <div class="destination-overlay">
-                        <span class="destination-sub">Little England</span>
-                        <h3 class="destination-title">Nuwara Eliya</h3>
+                <!-- 6. Nuwara Eliya Tea Country -->
+                <div class="dest-card-full">
+                    <img src="assets/images/cultural_highlights_tour.jpg" alt="Nuwara Eliya Little England Tea Estates" class="dest-card-img">
+                    <div class="dest-card-content">
+                        <span class="dest-tag">Highland Tea Country • Little England</span>
+                        <h3 style="font-size:1.4rem;margin-bottom:0.6rem;">Nuwara Eliya</h3>
+                        <p style="font-size:0.875rem;color:var(--color-text-sub);line-height:1.6;margin-bottom:1.25rem;flex-grow:1;">
+                            <strong>Tea Culture & Climate:</strong> Situated 1,868 meters above sea level, Nuwara Eliya offers crisp mountain air, colonial Tudor bungalows, Victoria Park, Gregory Lake, and world-renowned Ceylon tea plantation tours.
+                        </p>
+                        <a href="destination-nuwara-eliya.html" class="btn btn-outline-ocean" style="align-self:flex-start;padding:0.45rem 1.2rem;font-size:0.8rem;">EXPLORE NUWARA ELIYA &rarr;</a>
                     </div>
-                </a>
+                </div>
 
-            </div>
-
-            <div style="text-align:center;margin-top:3rem;">
-                <a href="index.html#journey-planner" class="btn btn-gold">BUILD YOUR CUSTOM DESTINATION ITINERARY &rarr;</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="assets/logo/LOGO_REAL_TRANSPARENT.png" alt="Aventara Travels Logo" style="height:50px;width:auto;">
+                    </a>
+                    <p style="margin-top:0.75rem;">AVENTARA TRAVELS SRI LANKA<br>Curated Journeys, Unforgettable Memories.</p>
+                </div>
+
+                <div>
+                    <h4 style="color:#fff;margin-bottom:1.25rem;">Quick Links</h4>
+                    <ul style="line-height:2;font-size:0.875rem;">
+                        <li><a href="index.html" style="color:rgba(255,255,255,0.7);">Home</a></li>
+                        <li><a href="about.html" style="color:rgba(255,255,255,0.7);">About Aventara</a></li>
+                        <li><a href="tours.html" style="color:rgba(255,255,255,0.7);">Sri Lanka Tours</a></li>
+                        <li><a href="destinations.html" style="color:rgba(255,255,255,0.7);">Destinations</a></li>
+                        <li><a href="contact.html" style="color:rgba(255,255,255,0.7);">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color:#fff;margin-bottom:1.25rem;">Top Tours</h4>
+                    <ul style="line-height:2;font-size:0.875rem;">
+                        <li><a href="tour-cultural-highlights.html" style="color:rgba(255,255,255,0.7);">Cultural Highlights</a></li>
+                        <li><a href="tour-sri-lanka-honeymoon-tours.html" style="color:rgba(255,255,255,0.7);">Honeymoon Escapes</a></li>
+                        <li><a href="tour-wildlife-adventure.html" style="color:rgba(255,255,255,0.7);">Wildlife Safaris</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color:#fff;margin-bottom:1.25rem;">Contact & Support</h4>
+                    <ul style="line-height:2;font-size:0.875rem;">
+                        <li><a href="tel:+94779970840" style="color:rgba(255,255,255,0.7);">📞 +94 77 99 70 840</a></li>
+                        <li><a href="mailto:aventaratravels@gmail.com" style="color:rgba(255,255,255,0.7);">✉️ aventaratravels@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="footer-bottom">
                 <div>© 2026 Aventara Travels Sri Lanka. All Rights Reserved.</div>
-                <div>Primary Domain: <a href="https://aventaratravels.com/" style="color:var(--color-warm-gold);">aventaratravels.com</a></div>
+                <div>Primary Domain: <a href="https://aventaratravels.com/" style="color:var(--color-gold);">aventaratravels.com</a></div>
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/94779970840" class="whatsapp-float" target="_blank" rel="noopener">💬</a>
 
     <script src="js/script.js"></script>
 </body>
