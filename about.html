@@ -6,21 +6,121 @@
 
     <title>About Us | Aventara Travels Sri Lanka DMC</title>
 
-    <meta name="description" content="Learn about Aventara Travels Sri Lanka, a premier Destination Management Company (DMC) crafting personalized private tours, luxury holidays, and authentic island experiences.">
-    <meta name="keywords" content="About Aventara Travels, Sri Lanka DMC, Sri Lanka travel agency, Sri Lanka tour operator">
+    <meta name="description" content="Discover the story of Aventara Travels Sri Lanka, a premier Destination Management Company (DMC) crafting luxury tailor-made private tours, chauffeur guide journeys, and authentic island experiences.">
+    <meta name="keywords" content="About Aventara Travels, Sri Lanka DMC, Sri Lanka travel agency, Sri Lanka tour operator, Keppetipola DMC">
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://aventaratravels.com/about.html">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="About Aventara Travels | Sri Lanka Travel Agency & DMC">
-    <meta property="og:description" content="Curated Journeys, Unforgettable Memories. Discover our travel philosophy, mission, and Sri Lanka DMC services.">
+    <meta property="og:description" content="Curated Journeys, Unforgettable Memories. Learn about our local travel specialists, mission, vision, and DMC ground handling.">
     <meta property="og:url" content="https://aventaratravels.com/about.html">
-    <meta property="og:image" content="https://aventaratravels.com/assets/images/sigiriya_rock_fortress.jpg">
+    <meta property="og:image" content="https://aventaratravels.com/assets/images/cultural_highlights_tour.jpg">
 
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-number {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--color-warm-gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--color-charcoal);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .value-card {
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            padding: 2.25rem 1.75rem;
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-warm-gold);
+        }
+
+        .value-icon {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-about-banner {
+            position: relative;
+            height: 380px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 3.5rem;
+        }
+
+        .hero-about-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-about-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 2.5rem;
+            color: var(--color-white);
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Top Utility Header Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-info">
+                <a href="mailto:aventaratravels@gmail.com">✉️ aventaratravels@gmail.com</a>
+                <a href="tel:+94779970840">📞 +94 77 99 70 840</a>
+                <a href="https://wa.me/94779970840" target="_blank" rel="noopener" style="color:var(--color-accent-green);font-weight:700;">💬 WhatsApp Online 24/7</a>
+            </div>
+
+            <div class="top-bar-right">
+                <span class="currency-badge">USD ($)</span>
+                <span>Licensed Sri Lanka DMC</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Header Navigation -->
     <header class="site-header">
@@ -34,12 +134,12 @@
                 <a href="about.html" class="nav-link active">About Us</a>
 
                 <div class="nav-item">
-                    <a href="tours.html" class="nav-link">Tours ▾</a>
+                    <a href="tours.html" class="nav-link">Holidays & Tours ▾</a>
                     <div class="dropdown-menu">
                         <a href="tours.html" class="dropdown-link">All Tours</a>
                         <a href="tour-cultural-highlights.html" class="dropdown-link">Cultural Tours</a>
-                        <a href="tour-wildlife-adventure.html" class="dropdown-link">Wildlife Tours</a>
-                        <a href="tour-sri-lanka-honeymoon-tours.html" class="dropdown-link">Honeymoon Tours</a>
+                        <a href="tour-wildlife-adventure.html" class="dropdown-link">Wildlife Safaris</a>
+                        <a href="tour-sri-lanka-honeymoon-tours.html" class="dropdown-link">Honeymoon Escapes</a>
                         <a href="tour-beach-hopping.html" class="dropdown-link">Beach Holidays</a>
                     </div>
                 </div>
@@ -48,10 +148,10 @@
                     <a href="destinations.html" class="nav-link">Destinations ▾</a>
                     <div class="dropdown-menu">
                         <a href="destinations.html" class="dropdown-link">All Destinations</a>
-                        <a href="destination-kandy.html" class="dropdown-link">Kandy</a>
-                        <a href="destination-sigiriya.html" class="dropdown-link">Sigiriya</a>
-                        <a href="destination-ella.html" class="dropdown-link">Ella</a>
-                        <a href="destination-galle.html" class="dropdown-link">Galle</a>
+                        <a href="destination-kandy.html" class="dropdown-link">Kandy Sacred City</a>
+                        <a href="destination-sigiriya.html" class="dropdown-link">Sigiriya Rock</a>
+                        <a href="destination-ella.html" class="dropdown-link">Ella & Nine Arch</a>
+                        <a href="destination-galle.html" class="dropdown-link">Galle Fort</a>
                     </div>
                 </div>
 
@@ -60,7 +160,7 @@
                 <a href="contact.html" class="nav-link">Contact</a>
 
                 <a href="index.html#journey-planner" class="btn btn-glass-primary">
-                    Plan Your Journey
+                    GET A QUOTE
                 </a>
             </nav>
 
@@ -70,95 +170,210 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="hero-section" style="min-height:50vh;background-image: url('assets/images/cultural_highlights_tour.jpg');">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="section-tagline">OUR STORY & PHILOSOPHY</span>
-            <h1 class="hero-title">About Aventara Travels</h1>
-            <p class="hero-subtitle">"Curated Journeys, Unforgettable Memories."<br>Connecting global travelers with authentic Sri Lankan hospitality and bespoke travel experiences.</p>
+    <!-- Page Title Header -->
+    <section class="section-padding-sm bg-sand">
+        <div class="container text-center">
+            <span class="section-tagline">OUR STORY & VISION</span>
+            <h1 class="section-title">About Aventara Travels</h1>
+            <p class="section-description" style="max-width:700px;margin:0 auto;">
+                "Curated Journeys, Unforgettable Memories."<br>Discover how our local Sri Lankan destination management team creates bespoke private holidays for travelers worldwide.
+            </p>
         </div>
     </section>
 
-    <!-- About Story Section -->
+    <!-- About Content Section -->
     <section class="section-padding bg-off-white">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tagline">WHO WE ARE</span>
-                <h2 class="section-title">Your Local Sri Lankan Destination Management Specialist</h2>
-                <p class="section-description">
-                    Aventara Travels is a licensed Sri Lankan travel agency and Destination Management Company (DMC) headquartered in Keppetipola, Sri Lanka. We specialize in designing bespoke private holidays, tailor-made itineraries, luxury honeymoons, wildlife safaris, and cultural immersions.
-                </p>
+            
+            <!-- Hero Showcase Banner -->
+            <div class="hero-about-banner">
+                <img src="assets/images/cultural_highlights_tour.jpg" alt="Aventara Travels Sri Lanka Team & Journey">
+                <div class="hero-about-overlay">
+                    <div>
+                        <span style="font-size:0.8rem;letter-spacing:2px;font-weight:700;color:var(--color-warm-gold);text-transform:uppercase;">SRI LANKAN DMC SPECIALISTS</span>
+                        <h2 style="color:#fff;font-size:2rem;margin-top:0.3rem;">Crafting Authentic Private Journeys Across Sri Lanka</h2>
+                    </div>
+                </div>
             </div>
 
-            <!-- Mission & Vision Cards -->
-            <div class="cards-grid-3" style="grid-template-columns: 1fr 1fr; margin-bottom: 3.5rem;">
-                <div class="feature-box" style="text-align:left;padding:2.5rem;">
-                    <div class="feature-icon" style="margin:0 0 1rem 0;">🎯</div>
+            <!-- Story & Global Presence (Olanka Benchmark Layout) -->
+            <div class="cards-grid-3" style="grid-template-columns: 1fr 1fr; gap:3rem; margin-bottom: 4rem;">
+                <div>
+                    <span class="section-tagline">OUR ORIGINS & STORY</span>
+                    <h2 class="section-title" style="font-size:1.85rem;">Rooted in Sri Lankan Hospitality</h2>
+                    <p style="color:var(--color-text-muted);font-size:1.05rem;line-height:1.7;">
+                        Aventara Travels Sri Lanka is a licensed travel agency and Destination Management Company (DMC) based on Nuwaraeliya Road, Keppetipola, Sri Lanka. 
+                    </p>
+                    <p style="color:var(--color-text-muted);font-size:1.05rem;line-height:1.7;">
+                        Founded with a passion for authentic island travel, we connect international visitors with Sri Lanka’s UNESCO world heritage sites, misty highland tea estates, wild elephant national parks, and palm-fringed tropical coastlines through seamless private chauffeur-guided tours.
+                    </p>
+                </div>
+
+                <div>
+                    <span class="section-tagline">INTERNATIONAL DMC REACH</span>
+                    <h2 class="section-title" style="font-size:1.85rem;">Serving Global Travelers</h2>
+                    <p style="color:var(--color-text-muted);font-size:1.05rem;line-height:1.7;">
+                        We serve travelers and B2B travel partners across key international markets including **Germany, Australia, the Netherlands, China, India, the UK, USA, France, Italy, and Switzerland**.
+                    </p>
+                    <p style="color:var(--color-text-muted);font-size:1.05rem;line-height:1.7;">
+                        With a dedicated fleet of modern air-conditioned luxury sedans, SUVs, and vans—driven by friendly, professional English-speaking guide chauffeurs—we ensure 24/7 ground handling excellence.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Key Company Statistics Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Tailor-Made Private Tours</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Dedicated Island Concierge</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Iconic Destinations Covered</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">5★</div>
+                    <div class="stat-label">Guest Satisfaction Service</div>
+                </div>
+            </div>
+
+            <!-- Mission & Vision Cards (Exact Brand Wording) -->
+            <div class="cards-grid-3" style="grid-template-columns: 1fr 1fr; margin: 4rem 0;">
+                <div class="plan-form-card" style="padding:2.5rem;">
+                    <div style="font-size:2.5rem;margin-bottom:1rem;">🎯</div>
                     <span class="section-tagline">OUR MISSION</span>
-                    <h3>Crafting Meaningful Journeys</h3>
-                    <p style="font-size:1.1rem;color:var(--color-charcoal);font-style:italic;">
+                    <h3 style="margin-bottom:1rem;">Crafting Personalized Journeys</h3>
+                    <p style="font-size:1.15rem;color:var(--color-charcoal);font-style:italic;line-height:1.6;font-family:var(--font-heading);">
                         "To craft personalized Sri Lankan journeys that turn every trip into an unforgettable experience."
                     </p>
                 </div>
 
-                <div class="feature-box" style="text-align:left;padding:2.5rem;">
-                    <div class="feature-icon" style="margin:0 0 1rem 0;">👁️</div>
+                <div class="plan-form-card" style="padding:2.5rem;">
+                    <div style="font-size:2.5rem;margin-bottom:1rem;">👁️</div>
                     <span class="section-tagline">OUR VISION</span>
-                    <h3>Connecting the World with Sri Lanka</h3>
-                    <p style="font-size:1.1rem;color:var(--color-charcoal);font-style:italic;">
+                    <h3 style="margin-bottom:1rem;">Connecting the World</h3>
+                    <p style="font-size:1.15rem;color:var(--color-charcoal);font-style:italic;line-height:1.6;font-family:var(--font-heading);">
                         "To connect the world with Sri Lanka through exceptional journeys, authentic experiences, and trusted service."
                     </p>
                 </div>
             </div>
 
-            <!-- Services Overview -->
+            <!-- Core Travel Values & Philosophy (Olanka Style Values) -->
             <div class="section-header">
-                <span class="section-tagline">OUR CORE SERVICES</span>
-                <h2 class="section-title">Complete Ground Handling & Travel Services</h2>
+                <span class="section-tagline">OUR TRAVEL PHILOSOPHY</span>
+                <h2 class="section-title">The Heart of Aventara Travels</h2>
+                <p class="section-description">Four pillars that define every journey we curate for our guests.</p>
             </div>
 
-            <div class="cards-grid-4">
-                <div class="feature-box">
-                    <div class="feature-icon">🚗</div>
-                    <h3>Private Chauffeur Tours</h3>
-                    <p>Modern air-conditioned luxury sedans, SUVs, and vans with dedicated English-speaking guide chauffeurs.</p>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🏛️</div>
+                    <h3>Authenticity & Culture</h3>
+                    <p style="color:var(--color-text-muted);font-size:0.9rem;">We bring you beyond standard tourist routes to experience authentic village lunches, ancient temple rituals, and local traditions.</p>
                 </div>
 
-                <div class="feature-box">
-                    <div class="feature-icon">🏨</div>
-                    <h3>Curated Accommodations</h3>
-                    <p>Hand-selected 3-star, 4-star deluxe, and 5-star boutique luxury resorts & tea plantation bungalows.</p>
+                <div class="value-card">
+                    <div class="value-icon">🚙</div>
+                    <h3>Private Comfort & Safety</h3>
+                    <p style="color:var(--color-text-muted);font-size:0.9rem;">All journeys feature private air-conditioned vehicles and experienced guide chauffeurs dedicated exclusively to your group.</p>
                 </div>
 
-                <div class="feature-box">
-                    <div class="feature-icon">🌿</div>
-                    <h3>Authentic Excursions</h3>
-                    <p>Exclusive safari jeeps, VIP scenic train reservations, cultural temple passes, and culinary experiences.</p>
+                <div class="value-card">
+                    <div class="value-icon">💎</div>
+                    <h3>Curated Luxury</h3>
+                    <p style="color:var(--color-text-muted);font-size:0.9rem;">From heritage tea plantation bungalows to 5-star beachfront resorts, we handpick accommodations for comfort and style.</p>
                 </div>
 
-                <div class="feature-box">
-                    <div class="feature-icon">✈️</div>
-                    <h3>B2B Ground Handling</h3>
-                    <p>Trusted Destination Management (DMC) ground handling for international tour operators and travel partners.</p>
+                <div class="value-card">
+                    <div class="value-icon">🌿</div>
+                    <h3>Sustainable Tourism</h3>
+                    <p style="color:var(--color-text-muted);font-size:0.9rem;">We support local communities, wildlife conservation projects in national parks, and eco-friendly travel practices.</p>
                 </div>
             </div>
 
-            <div style="text-align:center;margin-top:3.5rem;">
-                <a href="index.html#journey-planner" class="btn btn-gold">PLAN YOUR SRI LANKA TRIP &rarr;</a>
+            <!-- Action CTA Banner -->
+            <div class="plan-form-card" style="margin-top:4rem;text-align:center;background:linear-gradient(135deg, #151515 0%, #0A4D68 100%);color:#fff;border:none;">
+                <span class="section-tagline" style="color:var(--color-warm-gold);">READY TO EXPLORE SRI LANKA?</span>
+                <h2 style="color:#fff;font-size:2.2rem;margin-bottom:1rem;">Let Us Design Your Tailor-Made Journey</h2>
+                <p style="color:rgba(255,255,255,0.85);max-width:650px;margin:0 auto 2rem;">Connect with our local destination experts today to receive a free, personalized itinerary and quote within 12 hours.</p>
+                
+                <div style="display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;">
+                    <a href="index.html#journey-planner" class="btn btn-gold">PLAN YOUR JOURNEY NOW</a>
+                    <a href="https://wa.me/94779970840" target="_blank" rel="noopener" class="btn btn-outline-gold" style="color:#fff;border-color:#fff;">💬 CHAT ON WHATSAPP</a>
+                </div>
             </div>
+
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="assets/logo/LOGO_REAL_TRANSPARENT.png" alt="Aventara Travels Logo" style="height:55px;width:auto;">
+                    </a>
+                    <p style="margin-top:0.75rem;">AVENTARA TRAVELS SRI LANKA<br>Curated Journeys, Unforgettable Memories.</p>
+                    <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);margin-top:0.75rem;">
+                        Licensed Destination Management Company (DMC)<br>
+                        Location: Nuwaraeliya Road, Keppetipola, Sri Lanka
+                    </p>
+                </div>
+
+                <div>
+                    <h4 style="color:#fff;margin-bottom:1.25rem;">Quick Links</h4>
+                    <ul style="line-height:2;">
+                        <li><a href="index.html" style="color:rgba(255,255,255,0.7);">Home</a></li>
+                        <li><a href="about.html" style="color:rgba(255,255,255,0.7);">About Aventara</a></li>
+                        <li><a href="tours.html" style="color:rgba(255,255,255,0.7);">Sri Lanka Tours</a></li>
+                        <li><a href="destinations.html" style="color:rgba(255,255,255,0.7);">Destinations</a></li>
+                        <li><a href="experiences.html" style="color:rgba(255,255,255,0.7);">Experiences</a></li>
+                        <li><a href="contact.html" style="color:rgba(255,255,255,0.7);">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color:#fff;margin-bottom:1.25rem;">Top Tours</h4>
+                    <ul style="line-height:2;">
+                        <li><a href="tour-cultural-highlights.html" style="color:rgba(255,255,255,0.7);">Cultural Highlights</a></li>
+                        <li><a href="tour-sri-lanka-honeymoon-tours.html" style="color:rgba(255,255,255,0.7);">Honeymoon Escapes</a></li>
+                        <li><a href="tour-wildlife-adventure.html" style="color:rgba(255,255,255,0.7);">Wildlife Safaris</a></li>
+                        <li><a href="tour-beach-hopping.html" style="color:rgba(255,255,255,0.7);">Beach Holidays</a></li>
+                        <li><a href="tour-luxury-sri-lanka.html" style="color:rgba(255,255,255,0.7);">Luxury Journeys</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color:#fff;margin-bottom:1.25rem;">Contact & Support</h4>
+                    <ul style="line-height:2;">
+                        <li><a href="tel:+94779970840" style="color:rgba(255,255,255,0.7);">📞 +94 77 99 70 840</a></li>
+                        <li><a href="https://wa.me/94779970840" target="_blank" rel="noopener" style="color:var(--color-accent-green);font-weight:700;">💬 WhatsApp Chat</a></li>
+                        <li><a href="mailto:aventaratravels@gmail.com" style="color:rgba(255,255,255,0.7);">✉️ aventaratravels@gmail.com</a></li>
+                        <li><a href="privacy.html" style="color:rgba(255,255,255,0.7);">Privacy Policy</a></li>
+                        <li><a href="terms.html" style="color:rgba(255,255,255,0.7);">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="footer-bottom">
                 <div>© 2026 Aventara Travels Sri Lanka. All Rights Reserved.</div>
                 <div>Primary Domain: <a href="https://aventaratravels.com/" style="color:var(--color-warm-gold);">aventaratravels.com</a></div>
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/94779970840?text=Hello%20Aventara%20Travels,%20I%20would%20like%20to%20plan%20a%20trip%20to%20Sri%20Lanka." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        💬
+    </a>
 
     <script src="js/script.js"></script>
 </body>
