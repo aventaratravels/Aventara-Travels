@@ -14,4 +14,3 @@ No Gmail password is stored in the website.
 
 The form endpoint is:
 https://formsubmit.co/ajax/aventaratravels@gmail.com
-

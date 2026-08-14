@@ -1,87 +1,124 @@
-/* ==========================================================================
-   AVENTARA TRAVELS SRI LANKA - JAVASCRIPT ENGINE
-   ========================================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. Sticky Header Glass Effect ---
-    const header = document.querySelector('.site-header, header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 40) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    }
-
-    // --- 2. Mobile Menu Toggle ---
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-links, .nav-menu');
     
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        });
-
-        // Close on clicking link
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-    }
-
-    // --- 3. Mobile Dropdown Toggle ---
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => {
-        const link = item.querySelector('.nav-link');
-        if (link && item.querySelector('.dropdown-menu')) {
-            link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 992) {
-                    e.preventDefault();
-                    item.classList.toggle('active');
-                }
-            });
+    // --- Sticky Header & Active State ---
+    const header = document.querySelector('header');
+    const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add(isHomePage ? 'scrolled' : 'scrolled-light');
+        } else {
+            header.classList.remove('scrolled', 'scrolled-light');
         }
     });
 
-    // --- 4. Back to Top Button ---
-    const backToTopBtn = document.querySelector('.back-to-top');
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 400) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        });
+    // Handle pages that don't have a full-screen hero image
+    if (!isHomePage && !document.querySelector('.hero')) {
+         header.classList.add('scrolled-light');
+    }
 
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+    // --- Mobile Menu ---
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            // Prevent scrolling when menu is open
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
     }
 
-    // --- 5. FAQ Accordion ---
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // --- Scroll Reveal ---
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const revealPoint = 100;
+            
+            if (elementTop < windowHeight - revealPoint) {
+                element.classList.add('active');
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Trigger on load
+
+    // --- Back to Top Button ---
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+    backToTopBtn.className = 'back-to-top';
+    document.body.appendChild(backToTopBtn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // --- Filtering Logic (Tours/Experiences) ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const filterItems = document.querySelectorAll('.filter-item');
+
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                filterItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    }
+
+    // --- FAQ Accordion ---
     const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
     accordionHeaders.forEach(header => {
         header.addEventListener('click', () => {
             const item = header.parentElement;
-            const content = item.querySelector('.accordion-content');
+            const content = header.nextElementSibling;
             
-            // Close other accordions
+            // Close all others
             document.querySelectorAll('.accordion-item').forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
-                    const otherContent = otherItem.querySelector('.accordion-content');
-                    if (otherContent) otherContent.style.maxHeight = null;
+                    otherItem.querySelector('.accordion-content').style.maxHeight = null;
                 }
             });
             
+            // Toggle current
             item.classList.toggle('active');
             if (item.classList.contains('active')) {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -91,158 +128,111 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 6. Universal "Plan Your Journey" Modal Trigger ---
-    const modalOverlay = document.getElementById('planJourneyModal');
-    const modalCloseBtn = document.querySelector('.modal-close');
-
-    function openModal() {
-        if (modalOverlay) {
-            modalOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        } else {
-            const plannerSection = document.getElementById('journey-planner') || document.getElementById('plan-your-journey');
-            if (plannerSection) {
-                plannerSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    }
-
-    function closeModal() {
-        if (modalOverlay) {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    }
-
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener('click', closeModal);
-    }
-
-    if (modalOverlay) {
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) closeModal();
-        });
-    }
-
-    // Connect all "Plan Your Journey", "Request Quote", "Inquire Now" buttons to trigger modal or scroll
-    document.querySelectorAll('.btn-plan-journey, a[href="#journey-planner"], a[href="#plan-your-journey"], .btn-inquire-now').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const href = btn.getAttribute('href');
-            if (href === '#journey-planner' || href === '#plan-your-journey' || btn.classList.contains('btn-plan-journey') || btn.classList.contains('btn-inquire-now')) {
-                const target = document.querySelector(href);
-                if (target && !modalOverlay) {
-                    // Let default scroll action happen
-                } else if (modalOverlay) {
-                    e.preventDefault();
-                    openModal();
-                }
-            }
-        });
-    });
-
-    // --- 7. FormSubmit AJAX Form Handling ---
+    // --- Form Validation ---
     const forms = document.querySelectorAll('form');
+    
     forms.forEach(form => {
-        form.addEventListener('submit', async (e) => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-
-            // Client-side validation
+            
             let isValid = true;
             const requiredFields = form.querySelectorAll('[required]');
+            
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     isValid = false;
-                    field.style.borderColor = '#e74c3c';
+                    field.style.borderColor = '#dc3545';
                 } else {
-                    field.style.borderColor = '#E2DACB';
+                    field.style.borderColor = '#ccc';
                 }
             });
-
-            const emailField = form.querySelector('input[type="email"]');
-            if (emailField && emailField.value) {
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(emailField.value)) {
-                    isValid = false;
-                    emailField.style.borderColor = '#e74c3c';
-                }
-            }
-
-            const messageBox = form.querySelector('.form-message') || document.createElement('div');
-            messageBox.className = 'form-message';
-            if (!form.contains(messageBox)) form.appendChild(messageBox);
-
-            if (!isValid) {
-                messageBox.innerHTML = '<div style="background:#fde8e8;color:#9b1c1c;padding:0.75rem 1rem;border-radius:6px;margin-top:1rem;font-size:0.9rem;">Please complete all required fields with valid details.</div>';
-                return;
-            }
-
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn ? submitBtn.innerHTML : 'SUBMIT';
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = '<span style="display:inline-block;animation:spin 1s linear infinite;">⏳</span> SENDING ENQUIRY...';
-            }
-
-            // Build FormSubmit target URL
-            const actionUrl = form.action.includes('formsubmit.co') ? form.action : 'https://formsubmit.co/ajax/aventaratravels@gmail.com';
-
-            try {
-                const formData = new FormData(form);
-                // Ensure Subject line is set
-                if (!formData.has('_subject')) {
-                    formData.append('_subject', 'New Travel Enquiry - Aventara Travels Sri Lanka');
-                }
-
-                const response = await fetch(actionUrl, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
+            
+            const messageEl = form.querySelector('.form-message');
+            
+            if (isValid) {
+                // Simulate form submission
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Sending...';
+                btn.disabled = true;
+                
+                setTimeout(() => {
                     form.reset();
-                    messageBox.innerHTML = '<div style="background:#def7ec;color:#03543f;padding:1rem 1.25rem;border-radius:8px;margin-top:1rem;font-size:0.95rem;font-weight:600;">✨ Thank you! Your enquiry has been delivered to Aventara Travels. Our Sri Lanka travel specialists will contact you within 12 hours.</div>';
-                    setTimeout(() => {
-                        if (modalOverlay && modalOverlay.classList.contains('active')) {
-                            closeModal();
-                        }
-                    }, 4000);
-                } else {
-                    throw new Error('FormSubmit endpoint error');
-                }
-            } catch (err) {
-                console.error('Enquiry Submission Error:', err);
-                messageBox.innerHTML = '<div style="background:#fde8e8;color:#9b1c1c;padding:1rem 1.25rem;border-radius:8px;margin-top:1rem;font-size:0.9rem;">We could not deliver your form directly. Please contact us directly via WhatsApp (+94 77 99 70 840) or Email (aventaratravels@gmail.com).</div>';
-            } finally {
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalBtnText;
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    
+                    if (messageEl) {
+                        messageEl.textContent = 'Thank you! Your enquiry has been received. We will contact you shortly.';
+                        messageEl.className = 'form-message success';
+                        messageEl.style.display = 'block';
+                        
+                        setTimeout(() => {
+                            messageEl.style.display = 'none';
+                        }, 5000);
+                    }
+                }, 1500);
+            } else {
+                if (messageEl) {
+                    messageEl.textContent = 'Please fill out all required fields.';
+                    messageEl.className = 'form-message error';
+                    messageEl.style.display = 'block';
                 }
             }
         });
     });
 
-    // --- 8. Filter Logic for Tour Listings ---
-    const filterBtns = document.querySelectorAll('.filter-tab');
-    const filterItems = document.querySelectorAll('.tour-card[data-category]');
-
-    if (filterBtns.length > 0) {
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-                filterItems.forEach(item => {
-                    const cat = item.getAttribute('data-category');
-                    if (filter === 'all' || cat.includes(filter)) {
-                        item.style.display = 'flex';
-                    } else {
-                        item.style.display = 'none';
-                    }
+    // Floating Share Button
+    const shareBtn = document.getElementById('shareBtn');
+    if (shareBtn) {
+        shareBtn.addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'Aventara Travels',
+                        text: 'Discover curated Sri Lankan journeys with Aventara Travels.',
+                        url: window.location.href,
+                    });
+                } catch (err) {
+                    console.log('Error sharing:', err);
+                }
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    const originalHTML = shareBtn.innerHTML;
+                    shareBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                    setTimeout(() => {
+                        shareBtn.innerHTML = originalHTML;
+                    }, 2000);
                 });
-            });
+            }
         });
     }
 });
 
+
+// Aventara quote/contact forms: send enquiries securely via FormSubmit.
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('form.enquiry-form').forEach(function(form) {
+    form.addEventListener('submit', async function(e) {
+      if (!form.action.includes('formsubmit.co')) return;
+      e.preventDefault();
+      const btn=form.querySelector('button[type="submit"]');
+      const original=btn ? btn.innerHTML : '';
+      if(btn){btn.disabled=true;btn.innerHTML='SENDING...';}
+      try {
+        const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+        if(!response.ok) throw new Error('send failed');
+        form.reset();
+        let msg=form.querySelector('.form-message');
+        if(!msg){msg=document.createElement('div');msg.className='form-message';form.appendChild(msg);}
+        msg.textContent='Thank you! Your enquiry has been sent to Aventara Travels. We will contact you shortly.';
+        msg.style.display='block';
+      } catch(err) {
+        let msg=form.querySelector('.form-message');
+        if(!msg){msg=document.createElement('div');msg.className='form-message';form.appendChild(msg);}
+        msg.textContent='We could not send your enquiry right now. Please contact Aventara Travels by WhatsApp or email.';
+        msg.style.display='block';
+      } finally { if(btn){btn.disabled=false;btn.innerHTML=original;} }
+    });
+  });
+});
