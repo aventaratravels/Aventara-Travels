@@ -1,441 +1,246 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Lanka Tours &amp; Holiday Packages | Aventara Travels</title>
+
+    <title>Sri Lanka Tour Packages | Private Custom Tours | Aventara Travels</title>
+
+    <meta name="description" content="Explore tailor-made Sri Lanka tour packages. Private chauffeur tours, cultural heritage journeys, wildlife safaris, honeymoon escapes, and luxury beach holidays.">
+    <meta name="keywords" content="Sri Lanka tour packages, private Sri Lanka tours, Sri Lanka honeymoon tour, Sri Lanka wildlife safari, luxury Sri Lanka tours">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://aventaratravels.com/tours.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sri Lanka Tour Packages | Aventara Travels">
+    <meta property="og:description" content="Curated Sri Lanka private tours and holiday itineraries crafted by local DMC specialists.">
+    <meta property="og:url" content="https://aventaratravels.com/tours.html">
+    <meta property="og:image" content="https://aventaratravels.com/assets/images/cultural_highlights_tour.jpg">
+
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .category-intros { max-width: 800px; margin: 0 auto 3rem; text-align: center; }
-        .category-intro { display: none; font-size: 1.1rem; color: #555; line-height: 1.8; animation: fadeIn 0.5s; }
-        .category-intro.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .tours-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
-    </style>
+        .filter-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
 
-    <meta name="description" content="Explore tailor-made Sri Lanka tours, private holidays, honeymoon packages, luxury journeys, wildlife adventures and cultural experiences with Aventara Travels.">
-    <meta name="keywords" content="Sri Lanka travel agency, Sri Lanka DMC, Sri Lanka tours, private Sri Lanka tours, tailor made Sri Lanka holidays, Sri Lanka honeymoon, Sri Lanka luxury travel, Aventara Travels">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://aventaratravels.github.io/Aventara-Travels/tours">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Sri Lanka Tours &amp; Holiday Packages | Aventara Travels">
-    <meta property="og:description" content="Explore tailor-made Sri Lanka tours, private holidays, honeymoon packages, luxury journeys, wildlife adventures and cultural experiences with Aventara Travels.">
-    <meta property="og:url" content="https://aventaratravels.github.io/Aventara-Travels/tours">
-    <meta property="og:site_name" content="Aventara Travels">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sri Lanka Tours &amp; Holiday Packages | Aventara Travels">
-    <meta name="twitter:description" content="Explore tailor-made Sri Lanka tours, private holidays, honeymoon packages, luxury journeys, wildlife adventures and cultural experiences with Aventara Travels.">
+        .filter-tab {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            padding: 0.6rem 1.4rem;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .filter-tab.active, .filter-tab:hover {
+            background: var(--color-warm-gold);
+            color: var(--color-white);
+            border-color: var(--color-warm-gold);
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header (Same as other pages, simplified for insertion) -->
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/logo/LOGO_REAL_TRANSPARENT.png" alt="Aventara Travels Logo" style="height: 60px; width: auto; object-fit: contain;">
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo/LOGO_REAL_TRANSPARENT.png" alt="Aventara Travels Logo">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+
+                <div class="nav-item">
+                    <a href="tours.html" class="nav-link active">Tours ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="tours.html" class="dropdown-link">All Tours</a>
+                        <a href="tour-cultural-highlights.html" class="dropdown-link">Cultural Tours</a>
+                        <a href="tour-wildlife-adventure.html" class="dropdown-link">Wildlife Tours</a>
+                        <a href="tour-sri-lanka-honeymoon-tours.html" class="dropdown-link">Honeymoon Tours</a>
+                        <a href="tour-beach-hopping.html" class="dropdown-link">Beach Holidays</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="destinations.html" class="nav-link">Destinations ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="destinations.html" class="dropdown-link">All Destinations</a>
+                        <a href="destination-kandy.html" class="dropdown-link">Kandy</a>
+                        <a href="destination-sigiriya.html" class="dropdown-link">Sigiriya</a>
+                        <a href="destination-ella.html" class="dropdown-link">Ella</a>
+                        <a href="destination-galle.html" class="dropdown-link">Galle</a>
+                    </div>
+                </div>
+
+                <a href="experiences.html" class="nav-link">Experiences</a>
+                <a href="travel-guide.html" class="nav-link">Travel Guide</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+
+                <a href="index.html#journey-planner" class="btn btn-glass-primary">
+                    Plan Your Journey
                 </a>
+            </nav>
+
+            <div class="hamburger">
+                <span></span><span></span><span></span>
             </div>
-            
-              <nav class="nav-menu">
-                  <a href="about.html" class="nav-link">About Us</a>
-                  
-                  <a href="tours.html" class="nav-link">Tours</a>
-                  
-                  <a href="destinations.html" class="nav-link">Destinations</a>
-                  
-                  <div class="nav-item">
-                      <a href="our-expertise.html" class="nav-link">Our Expertise</a>
-                      <div class="dropdown-menu">
-                          <a href="transportation.html" class="dropdown-link">Transportation</a>
-                          <a href="wellness.html" class="dropdown-link">Wellness</a>
-                          <a href="nature-and-adventure.html" class="dropdown-link">Nature & Adventure</a>
-                      </div>
-                  </div>
-                  
-                  <div class="nav-item">
-                      <a href="experiences.html" class="nav-link">Experience Sri Lanka</a>
-                      <div class="dropdown-menu">
-                          <a href="experience-nature.html" class="dropdown-link">Explore Nature</a>
-                          <a href="experience-heritage.html" class="dropdown-link">Heritage & Culture</a>
-                          <a href="experience-beaches.html" class="dropdown-link">Beaches & Sunsets</a>
-                          <a href="experience-wildlife.html" class="dropdown-link">Wildlife & Adventure</a>
-                          <a href="experience-religious.html" class="dropdown-link">Religious Journeys</a>
-                      </div>
-                  </div>
-                  
-                  <div class="nav-item">
-                      <a href="travel-guide.html" class="nav-link">Travel Guide</a>
-                      <div class="dropdown-menu">
-                          <a href="things-to-do.html" class="dropdown-link">Things to Do</a>
-                          <a href="foods-drinks.html" class="dropdown-link">Foods & Drinks</a>
-                      </div>
-                  </div>
-                  
-                  <a href="contact.html" class="nav-link">Contact</a>
-                  <a href="index.html#journey-planner" class="btn-glass" style="margin-left: 1rem;">Plan Your Journey</a>
-              </nav>
-            <div class="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
 
-    <!-- Banner -->
-    <section class="banner" style="background-image: url('https://en.wikipedia.org/wiki/Special:FilePath/Nine_arch_bridge,_Ella,_Sri_lanka.jpg?width=800'); padding: 12rem 0 8rem;">
-        <div class="container banner-content reveal">
-            <h1>Our Tour Packages</h1>
-            <p>Curated journeys designed for every type of traveller.</p>
+    <!-- Page Banner -->
+    <section class="hero-section" style="min-height:50vh;background-image: url('assets/images/cultural_highlights_tour.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="section-tagline">TAILOR-MADE SRI LANKA ITINERARIES</span>
+            <h1 class="hero-title">Sri Lanka Tour Packages</h1>
+            <p class="hero-subtitle">Every itinerary is private, flexible, and completely customizable to your travel desires.</p>
         </div>
     </section>
 
-    <section class="section" style="background-color: var(--off-white);">
-        <div class="container reveal">
+    <!-- Tours Explorer Section -->
+    <section class="section-padding bg-off-white">
+        <div class="container">
             
-            <!-- Filters -->
-            <div class="filters" style="margin-bottom: 2rem;">
-                <button class="filter-btn active" data-filter="culture">Culture</button>
-                <button class="filter-btn" data-filter="nature">Nature Tours</button>
-                <button class="filter-btn" data-filter="romantic">Romantic Escape</button>
-                <button class="filter-btn" data-filter="hill">Hill Country</button>
-                <button class="filter-btn" data-filter="beach">Beach</button>
-                <button class="filter-btn" data-filter="wellness">Ayurveda & Wellness</button>
+            <!-- Category Filter Tabs -->
+            <div class="filter-container">
+                <button class="filter-tab active" data-filter="all">All Tours</button>
+                <button class="filter-tab" data-filter="cultural">Cultural & Heritage</button>
+                <button class="filter-tab" data-filter="wildlife">Wildlife Safaris</button>
+                <button class="filter-tab" data-filter="honeymoon">Honeymoon & Romantic</button>
+                <button class="filter-tab" data-filter="beach">Beach & Coastline</button>
+                <button class="filter-tab" data-filter="luxury">Luxury & Boutique</button>
             </div>
 
-            <!-- Intros -->
-            <div class="category-intros">
-                <div class="category-intro active" id="intro-culture">
-                    <p>Known by such names as Taprobane, Serendib and Ceylon in times past, Sri Lanka lays claim to a fascinating history. Cultural tours in Sri Lanka offer a glimpse of the rich heritage and help find the meaning behind local traditions and folklore. As a premier among travel agents in Sri Lanka, we customise your tour package to unravel everything from ancient ruins to UNESCO World Heritage Sites.</p>
-                </div>
-                <div class="category-intro" id="intro-nature">
-                    <p>The natural beauty of Sri Lanka can surely take your very breath away; laze upon dazzling, golden beaches and listen to the ethereal voices of the sea or embark on an adventurous Sri Lanka safari tour to spot predators on the prowl. This paradise island is filled with simplicity and charm promising all who visit, a perfect opportunity to be at one with nature.</p>
-                </div>
-                <div class="category-intro" id="intro-romantic">
-                    <p>Enjoy an island of enchantment with your soulmate.</p>
-                </div>
-                <div class="category-intro" id="intro-hill">
-                    <p>Exploring the hill country is a must for first-time visitors to the island. Featuring a different climate, culture and architecture, there are many amazing places to explore here. Witness the breath-taking natural beauty of the region and feel the fresh breeze cascading from the mountains, on our adventure-filled hill country tours for Sri Lanka.</p>
-                </div>
-                <div class="category-intro" id="intro-beach">
-                    <p>Relax on sun-kissed, soft sand and take a dip in azure waters on truly rejuvenating beach holidays in Sri Lanka. Be it the south or east coast, relaxation or recreation, Aventara Travels has the perfect getaway planned for those seeking to spend their time on the countryÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s stunning shores. Come experience the best Sri Lanka beach tours that will be treasured for a lifetime.</p>
-                </div>
-                <div class="category-intro" id="intro-wellness">
-                    <p>Looking for a tranquil oasis to relax and refresh your mind, body, and spirit? Escape from the various stresses of modern living and treat yourself to a blissful Ayurveda retreat in Sri Lanka; that incorporates a myriad of authentic treatments and traditional techniques, rooted in an ancient healing form unique to our island. Come, find a sense of inner peace amidst mother nature while embarking on a comprehensive wellness journey towards true rejuvenation.</p>
-                </div>
-            </div>
+            <!-- Tour Cards Grid -->
+            <div class="cards-grid-3">
 
-            <!-- Tours Grid -->
-            <div class="tours-grid">
-                
-                <!-- CULTURE -->
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sri_Lankan_Leopard_At_Yala_National_Park.jpg?width=800" alt="Cultural Highlights Tour"></div>
-                    <div class="tour-content">
-                        <h3>Cultural Highlights Tour</h3>
-                        <p>Visit renowned cultural sites on the island and experience a rich heritage.</p>
-                        <a href="tour-cultural-highlights.html" class="btn-text">View Itinerary</a>
+                <!-- 1. Cultural Highlights -->
+                <div class="tour-card" data-category="cultural">
+                    <div class="tour-card-image">
+                        <img src="assets/images/cultural_highlights_tour.jpg" alt="Cultural Highlights">
+                        <span class="tour-badge">7 Days / 6 Nights</span>
                     </div>
-                </div>
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Ella_Rock,_Sri_Lanka.jpg?width=800" alt="Sri Lanka Highlight Tour"></div>
-                    <div class="tour-content">
-                        <h3>Sri Lanka Highlight Tour</h3>
-                        <p>Explore the sights and delights of Sri Lanka on this five-day long highlights tour.</p>
-                        <a href="tour-sri-lanka-highlight.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Dambulla_Cave_Temple.jpg?width=800" alt="Classic Sri Lanka Tour"></div>
-                    <div class="tour-content">
-                        <h3>Classic Sri Lanka Tour</h3>
-                        <p>Discover Sri Lanka's iconic ancient kingdoms, sacred temples, and scenic landscapes.</p>
-                        <a href="tour-classic-sri-lanka.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sri_Lanka,_Tea_plantations_near_Nuwara_Eliya,_Picking_tea_leaves.jpg?width=800" alt="Luxury Sri Lanka Tour"></div>
-                    <div class="tour-content">
-                        <h3>Luxury Sri Lanka Tour</h3>
-                        <p>Indulge in premium boutique stays, private transfers, and luxury island experiences.</p>
-                        <a href="tour-luxury-sri-lanka.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sigiriya_rock_from_a_distance.jpg?width=800" alt="Sri Lanka Highlights Tour"></div>
-                    <div class="tour-content">
-                        <h3>Sri Lanka Highlights Tour</h3>
-                        <p>A comprehensive journey covering the finest cultural, scenic, and coastal gems.</p>
-                        <a href="tour-sri-lanka-highlights.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Stunning_Night_View_of_Colombo_City_Skyline.jpg?width=800" alt="Special Tours To Sri Lanka"></div>
-                    <div class="tour-content">
-                        <h3>Special Tours To Sri Lanka</h3>
-                        <p>Unique travel packages to help you explore tropical paradise.</p>
-                        <a href="tour-special-tours.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/SL_Galle_Fort_asv2020-01_img24.jpg?width=800" alt="Mini Tour Packages"></div>
-                    <div class="tour-content">
-                        <h3>Mini Tour Packages</h3>
-                        <p>We bring you closer to our world, culture, its people, and their way of life.</p>
-                        <a href="tour-mini-packages.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Dambulla_Cave_Temple.jpg?width=800" alt="Exotic Sri Lanka"></div>
-                    <div class="tour-content">
-                        <h3>Exotic Sri Lanka</h3>
-                        <p>Our tours of Sri Lanka promise to deliver all that you seek, and more.</p>
-                        <a href="tour-exotic-sri-lanka.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sri_Lanka,_Tea_plantations_near_Nuwara_Eliya,_Picking_tea_leaves.jpg?width=800" alt="Sri Lanka at Leisure"></div>
-                    <div class="tour-content">
-                        <h3>Sri Lanka at Leisure</h3>
-                        <p>A panoramic tour that leads you to the most iconic spots in Sri Lanka.</p>
-                        <a href="tour-leisure.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="culture" style="display: block; opacity: 1;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sigiriya_rock_from_a_distance.jpg?width=800" alt="Pearl Of The Indian Ocean"></div>
-                    <div class="tour-content">
-                        <h3>Pearl Of The Indian Ocean</h3>
-                        <p>From historic sites, lush mountains to pristine beaches, Sri Lanka has it all!</p>
-                        <a href="tour-pearl-indian-ocean.html" class="btn-text">View Itinerary</a>
+                    <div class="tour-card-content">
+                        <div class="tour-meta">📍 Sigiriya • Kandy • Nuwara Eliya • Galle</div>
+                        <h3 class="tour-title"><a href="tour-cultural-highlights.html">Cultural Highlights Tour</a></h3>
+                        <p class="tour-description">Climb Sigiriya Rock Fortress, visit the Temple of the Tooth in Kandy, and explore colonial Galle Fort.</p>
+                        <div class="tour-card-footer">
+                            <div><span class="tour-price-text">Starting from</span><span class="tour-price-val">Request a Quote</span></div>
+                            <a href="index.html#journey-planner" class="btn btn-gold">INQUIRE NOW</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- NATURE -->
-                <div class="tour-card filter-item" data-category="nature" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Nine_arch_bridge,_Ella,_Sri_lanka.jpg?width=800" alt="Connected to the wild"></div>
-                    <div class="tour-content">
-                        <h3>Connected to the wild</h3>
-                        <p>Be enthralled by the inspiring beauty of the exotic wildlife in Sri Lanka!</p>
-                        <a href="tour-connected-to-the-wild.html" class="btn-text">View Itinerary</a>
+                <!-- 2. Romantic Honeymoon -->
+                <div class="tour-card" data-category="honeymoon">
+                    <div class="tour-card-image">
+                        <img src="assets/images/nine_arch_bridge_ella.jpg" alt="Romantic Honeymoon">
+                        <span class="tour-badge">10 Days / 9 Nights</span>
                     </div>
-                </div>
-                <div class="tour-card filter-item" data-category="nature" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sri_Lankan_Leopard_At_Yala_National_Park.jpg?width=800" alt="Wildlife Adventure Tour"></div>
-                    <div class="tour-content">
-                        <h3>Wildlife Adventure Tour</h3>
-                        <p>Experience thrilling national park safaris and wildlife encounters across Sri Lanka.</p>
-                        <a href="tour-wildlife-adventure.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="nature" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sri_Lankan_Leopard_At_Yala_National_Park.jpg?width=800" alt="Cycling Tours"></div>
-                    <div class="tour-content">
-                        <h3>Cycling Tours</h3>
-                        <p>Cycle across enchanting sceneries in Sri Lanka and create perfect memories.</p>
-                        <a href="tour-cycling.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="nature" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Galle_Fort_Lighthouse.jpg?width=800" alt="Adventure Tours"></div>
-                    <div class="tour-content">
-                        <h3>Adventure Tours</h3>
-                        <p>Get your heart racing with some fantastic adventure tours in Sri Lanka!</p>
-                        <a href="tour-adventure.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="nature" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Stunning_Night_View_of_Colombo_City_Skyline.jpg?width=800" alt="Walking Tour"></div>
-                    <div class="tour-content">
-                        <h3>Walking Tour</h3>
-                        <p>Be enchanted by the beauty of Sri Lanka as you walk through its territories!</p>
-                        <a href="tour-walking.html" class="btn-text">View Itinerary</a>
+                    <div class="tour-card-content">
+                        <div class="tour-meta">📍 Negombo • Ella • Yala • Mirissa</div>
+                        <h3 class="tour-title"><a href="tour-sri-lanka-honeymoon-tours.html">Sri Lanka Honeymoon Escape</a></h3>
+                        <p class="tour-description">Scenic mountain trains, luxury boutique villas, private wildlife safaris, and beach candlelit dinners.</p>
+                        <div class="tour-card-footer">
+                            <div><span class="tour-price-text">Starting from</span><span class="tour-price-val">Request a Quote</span></div>
+                            <a href="index.html#journey-planner" class="btn btn-gold">INQUIRE NOW</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- ROMANTIC -->
-                <div class="tour-card filter-item" data-category="romantic" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/SL_Galle_Fort_asv2020-01_img24.jpg?width=800" alt="Wedding in Sri Lanka"></div>
-                    <div class="tour-content">
-                        <h3>Wedding in Sri Lanka</h3>
-                        <p>Create your dream wedding with Aventara Travels.</p>
-                        <a href="tour-weddings-in-sri-lanka.html" class="btn-text">View Service</a>
+                <!-- 3. Wildlife Safari -->
+                <div class="tour-card" data-category="wildlife">
+                    <div class="tour-card-image">
+                        <img src="assets/images/yala_wildlife_leopard.jpg" alt="Wildlife Safari">
+                        <span class="tour-badge">8 Days / 7 Nights</span>
                     </div>
-                </div>
-                <div class="tour-card filter-item" data-category="romantic" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Dambulla_Cave_Temple.jpg?width=800" alt="Sri Lanka Honeymoon Tours"></div>
-                    <div class="tour-content">
-                        <h3>Sri Lanka Honeymoon Tours</h3>
-                        <p>Celebrate love as endless as the horizon with our honeymoon packages.</p>
-                        <a href="tour-sri-lanka-honeymoon-tours.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="romantic" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sri_Lanka,_Tea_plantations_near_Nuwara_Eliya,_Picking_tea_leaves.jpg?width=800" alt="Romantic Escape"></div>
-                    <div class="tour-content">
-                        <h3>Romantic Escape</h3>
-                        <p>Enjoy an island of enchantment with your soulmate.</p>
-                        <a href="tour-romantic-escape.html" class="btn-text">View Itinerary</a>
+                    <div class="tour-card-content">
+                        <div class="tour-meta">📍 Wilpattu • Sigiriya • Udawalawe • Yala</div>
+                        <h3 class="tour-title"><a href="tour-wildlife-adventure.html">Connected to the Wild</a></h3>
+                        <p class="tour-description">Track wild leopards, observe Asian elephant herds, and explore wild bird sanctuaries in private 4x4 jeeps.</p>
+                        <div class="tour-card-footer">
+                            <div><span class="tour-price-text">Starting from</span><span class="tour-price-val">Request a Quote</span></div>
+                            <a href="index.html#journey-planner" class="btn btn-gold">INQUIRE NOW</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- HILL COUNTRY -->
-                <div class="tour-card filter-item" data-category="hill" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sigiriya_rock_from_a_distance.jpg?width=800" alt="Culture, Hill Country And Wild Life Tour"></div>
-                    <div class="tour-content">
-                        <h3>Culture, Hill Country And Wild Life Tour</h3>
-                        <p>Discover the true diversity of Sri Lanka with these special tours.</p>
-                        <a href="tour-culture-hill-wildlife.html" class="btn-text">View Itinerary</a>
+                <!-- 4. Beach Hopping -->
+                <div class="tour-card" data-category="beach">
+                    <div class="tour-card-image">
+                        <img src="assets/images/mirissa_tropical_beach.jpg" alt="Beach Hopping">
+                        <span class="tour-badge">7 Days / 6 Nights</span>
                     </div>
-                </div>
-                <div class="tour-card filter-item" data-category="hill" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Nine_arch_bridge,_Ella,_Sri_lanka.jpg?width=800" alt="Sri Lanka Hill Country Tour 3 Days"></div>
-                    <div class="tour-content">
-                        <h3>Sri Lanka Hill Country Tour 3 Days</h3>
-                        <p>Explore the picturesque hill country, rich in cultural and natural treasures.</p>
-                        <a href="tour-hill-country-3-days.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="hill" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sri_Lankan_Leopard_At_Yala_National_Park.jpg?width=800" alt="Tour in the Hills"></div>
-                    <div class="tour-content">
-                        <h3>Tour in the Hills</h3>
-                        <p>Explore the scenic hill country and experience its heritage and natural beauty.</p>
-                        <a href="tour-in-the-hills.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="hill" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Ella_Rock,_Sri_Lanka.jpg?width=800" alt="Hill Country Escape"></div>
-                    <div class="tour-content">
-                        <h3>Hill Country Escape</h3>
-                        <p>Immerse yourself in cool mountain air, tea plantations, and scenic train rides.</p>
-                        <a href="tour-hill-country.html" class="btn-text">View Itinerary</a>
+                    <div class="tour-card-content">
+                        <div class="tour-meta">📍 Bentota • Hikkaduwa • Galle • Mirissa</div>
+                        <h3 class="tour-title"><a href="tour-beach-hopping.html">Tropical Beach Hopping</a></h3>
+                        <p class="tour-description">Unwind along golden palm-fringed ocean beaches, whale watching cruises, and coastal seafood dining.</p>
+                        <div class="tour-card-footer">
+                            <div><span class="tour-price-text">Starting from</span><span class="tour-price-val">Request a Quote</span></div>
+                            <a href="index.html#journey-planner" class="btn btn-gold">INQUIRE NOW</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- BEACH -->
-                <div class="tour-card filter-item" data-category="beach" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Jaffna_Library.jpg?width=800" alt="Explore Enchanting Sri Lanka"></div>
-                    <div class="tour-content">
-                        <h3>Explore Enchanting Sri Lanka</h3>
-                        <p>A journey that will take you to pristine palm fringed shores of the island.</p>
-                        <a href="tour-explore-enchanting.html" class="btn-text">View Itinerary</a>
+                <!-- 5. Luxury Sri Lanka -->
+                <div class="tour-card" data-category="luxury">
+                    <div class="tour-card-image">
+                        <img src="assets/images/ayurvedic_wellness_spa.jpg" alt="Luxury Sri Lanka">
+                        <span class="tour-badge">12 Days / 11 Nights</span>
                     </div>
-                </div>
-                <div class="tour-card filter-item" data-category="beach" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Stunning_Night_View_of_Colombo_City_Skyline.jpg?width=800" alt="Beach Hopping Adventures"></div>
-                    <div class="tour-content">
-                        <h3>Beach Hopping Adventures</h3>
-                        <p>Welcome to a world of soft sands & crystalline waters for a true tropical escape</p>
-                        <a href="tour-beach-hopping.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="beach" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/SL_Galle_Fort_asv2020-01_img24.jpg?width=800" alt="Sun and Fun at Turyaa Kalutara"></div>
-                    <div class="tour-content">
-                        <h3>Sun and Fun at Turyaa Kalutara</h3>
-                        <p>Set off on a well-deserved beachside escape to the island's idyllic south coast.</p>
-                        <a href="tour-sun-fun.html" class="btn-text">View Itinerary</a>
+                    <div class="tour-card-content">
+                        <div class="tour-meta">📍 Colombo • Tea Country • Yala • Tangalle</div>
+                        <h3 class="tour-title"><a href="tour-luxury-sri-lanka.html">Grand Luxury Sri Lanka</a></h3>
+                        <p class="tour-description">Stay at 5-star Relais & Châteaux luxury bungalows, private helicopter transfers option, and VIP concierge.</p>
+                        <div class="tour-card-footer">
+                            <div><span class="tour-price-text">Starting from</span><span class="tour-price-val">Request a Quote</span></div>
+                            <a href="index.html#journey-planner" class="btn btn-gold">INQUIRE NOW</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- WELLNESS -->
-                <div class="tour-card filter-item" data-category="wellness" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Dambulla_Cave_Temple.jpg?width=800" alt="Unique Ayurvedic Tours"></div>
-                    <div class="tour-content">
-                        <h3>Unique Ayurvedic Tours</h3>
-                        <p>For peace of mind, a better inner balance and serenity in a fast-paced world.</p>
-                        <a href="tour-ayurvedic.html" class="btn-text">View Itinerary</a>
+                <!-- 6. Classic Sri Lanka -->
+                <div class="tour-card" data-category="cultural">
+                    <div class="tour-card-image">
+                        <img src="assets/images/sigiriya_rock_fortress.jpg" alt="Classic Sri Lanka">
+                        <span class="tour-badge">14 Days / 13 Nights</span>
                     </div>
-                </div>
-                <div class="tour-card filter-item" data-category="wellness" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sri_Lanka,_Tea_plantations_near_Nuwara_Eliya,_Picking_tea_leaves.jpg?width=800" alt="Meditation"></div>
-                    <div class="tour-content">
-                        <h3>Meditation</h3>
-                        <p>Rejuvenate your mind, body, and soul with a relaxing meditation retreat.</p>
-                        <a href="tour-meditation.html" class="btn-text">View Itinerary</a>
-                    </div>
-                </div>
-                <div class="tour-card filter-item" data-category="wellness" style="display: none; opacity: 0;">
-                    <div class="tour-image"><img src="https://en.wikipedia.org/wiki/Special:FilePath/Sigiriya_rock_from_a_distance.jpg?width=800" alt="Yoga"></div>
-                    <div class="tour-content">
-                        <h3>Yoga</h3>
-                        <p>Experience the healing power of Yoga with a wellness tour in Sri Lanka.</p>
-                        <a href="tour-yoga.html" class="btn-text">View Itinerary</a>
+                    <div class="tour-card-content">
+                        <div class="tour-meta">📍 All Island Grand Highlights</div>
+                        <h3 class="tour-title"><a href="tour-classic-sri-lanka.html">Classic Sri Lanka Grand Tour</a></h3>
+                        <p class="tour-description">The ultimate island exploration covering ancient UNESCO kingdoms, misty highlands, wildlife, and beaches.</p>
+                        <div class="tour-card-footer">
+                            <div><span class="tour-price-text">Starting from</span><span class="tour-price-val">Request a Quote</span></div>
+                            <a href="index.html#journey-planner" class="btn btn-gold">INQUIRE NOW</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <h3>Aventara Travels</h3>
-                <p>Curated journeys, unforgettable memories. Experience the true essence of Sri Lanka with our bespoke travel packages.</p>
-                <div class="social-links" style="margin-top: 1.5rem;">
-                    <a href="https://www.facebook.com/share/197h6vNKG1/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                    <a href="https://www.instagram.com/aventaratravels?igsh=MTZwbDJjaGkwYjViNQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                </div>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="destinations.html">Destinations</a></li>
-                    <li><a href="tours.html">Our Tours</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact Us</h4>
-                <ul class="footer-links">
-                    <li>Email: aventaratravels@gmail.com</li>
-                    <li><a href="https://wa.me/94779970840">WhatsApp: +94 77 99 70 840</a></li>
-                    <li>Location: Sri Lanka</li>
-                </ul>
-            </div>
-        </div>
+    <footer class="site-footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2026 Aventara Travels. All Rights Reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
-                </div>
+                <div>© 2026 Aventara Travels Sri Lanka. All Rights Reserved.</div>
+                <div>Primary Domain: <a href="https://aventaratravels.com/" style="color:var(--color-warm-gold);">aventaratravels.com</a></div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
-    <script>
-        // Inline logic for Category Intros to pair with the existing filter buttons
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const category = btn.getAttribute('data-filter');
-                
-                // Hide all intros
-                document.querySelectorAll('.category-intro').forEach(intro => {
-                    intro.classList.remove('active');
-                });
-                
-                // Show matching intro
-                const activeIntro = document.getElementById('intro-' + category);
-                if (activeIntro) {
-                    activeIntro.classList.add('active');
-                }
-            });
-        });
-    </script>
-    <button class="floating-share" id="shareBtn" aria-label="Share Website">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-    </button>
 </body>
 </html>
-
-
-
-
-
-
-
